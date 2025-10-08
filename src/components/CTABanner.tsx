@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, Phone } from "lucide-react";
 
@@ -32,7 +33,7 @@ export function CTABanner() {
               className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Call: +91 98765 43210
+              Call: +91 9970516523
             </Button>
           </div>
 

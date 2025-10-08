@@ -1,3 +1,4 @@
+import React from "react";
 import { Separator } from "./ui/separator";
 
 export function Footer() {
@@ -53,7 +54,7 @@ export function Footer() {
                 <span className="font-medium text-white">Email:</span> hello@riceproerp.com
               </div>
               <div className="text-sm text-gray-400">
-                <span className="font-medium text-white">Phone:</span> +91 98765 43210
+                <span className="font-medium text-white">Phone:</span> +91 9970516523
               </div>
             </div>
           </div>

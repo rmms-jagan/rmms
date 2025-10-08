@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { Package, Calculator, Truck, BarChart3 } from "lucide-react";
 

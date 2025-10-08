@@ -1,4 +1,5 @@
 import { Database, Settings, TrendingUp } from "lucide-react";
+import React from "react";
 
 export function HowItWorks() {
   const steps = [

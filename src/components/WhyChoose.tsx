@@ -1,5 +1,6 @@
 import { Cloud, Shield, Settings, Headphones } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
+import React from "react";
 
 export function WhyChoose() {
   const benefits = [
@@ -34,7 +35,7 @@ export function WhyChoose() {
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
               Why Choose{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                RMMS?
+                RicePro ERP?
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

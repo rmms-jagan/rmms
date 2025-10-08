@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Play, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import React from "react";
 
 export function Hero() {
   return (
