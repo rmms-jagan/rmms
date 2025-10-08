@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-08T14:56:26.726Z",
+  "lastUpdated": "2025-10-08T16:50:15.732Z",
   "sheet": "Content",
   "data": {
     "Features": {
@@ -51,7 +51,7 @@
       "logoIcon": "R",
       "navLinks": "Home,Features,Pricing,Contact",
       "ctaLoginText": "Login",
-      "ctaButtonText": "Request Demo"
+      "ctaButtonText": "Free Demo"
     }
   }
 }
