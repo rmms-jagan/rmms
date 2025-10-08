@@ -1,97 +1,44 @@
 {
-  "lastUpdated": "2025-10-08T12:21:17.808Z",
+  "lastUpdated": "2025-10-08T13:12:55.561Z",
   "sheet": "Content",
-  "data": [
-    {
-      "component": "Hero",
-      "key": "title",
-      "type": "string",
-      "value": "Empower your rice mill",
-      "group": ""
+  "data": {
+    "Hero": {
+      "title": "Empower your rice mill",
+      "titleTag": "Smarter ERP Automation",
+      "subtitle": "Streamline procurement, production, inventory, and sales — all in one cloud platform.",
+      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n"
     },
-    {
-      "component": "Hero",
-      "key": "titleTag",
-      "type": "string",
-      "value": "Smarter ERP Automation",
-      "group": ""
+    "Navigation": {
+      "logoText": "RMMS",
+      "navLinks": "Features,Solutions,Pricing,About",
+      "ctaLoginText": "Login",
+      "ctaButtonText": "Free Demo"
     },
-    {
-      "component": "Hero",
-      "key": "subtitle",
-      "type": "string",
-      "value": "Streamline procurement, production, inventory, and sales — all in one cloud platform.",
-      "group": ""
-    },
-    {
-      "component": "Hero",
-      "key": "image",
-      "type": "string",
-      "value": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
-      "group": ""
-    },
-    {
-      "component": "Features",
-      "key": "title",
-      "type": "string",
-      "value": "Powerful Features",
-      "group": ""
-    },
-    {
-      "component": "Features",
-      "key": "feature_title",
-      "type": "string",
-      "value": "Real-time Dashboard",
-      "group": "f1"
-    },
-    {
-      "component": "Features",
-      "key": "feature_desc",
-      "type": "string",
-      "value": "Monitor KPIs in real time",
-      "group": "f1"
-    },
-    {
-      "component": "Features",
-      "key": "feature_title",
-      "type": "string",
-      "value": "Smart Inventory",
-      "group": "f2"
-    },
-    {
-      "component": "Features",
-      "key": "feature_desc",
-      "type": "string",
-      "value": "Predict shortages, auto-order",
-      "group": "f2"
-    },
-    {
-      "component": "Navigation",
-      "key": "logoText",
-      "type": "string",
-      "value": "RMMS",
-      "group": ""
-    },
-    {
-      "component": "Navigation",
-      "key": "navLinks",
-      "type": "string",
-      "value": "Features,Solutions,Pricing,About",
-      "group": ""
-    },
-    {
-      "component": "Navigation",
-      "key": "ctaLoginText",
-      "type": "string",
-      "value": "Login",
-      "group": ""
-    },
-    {
-      "component": "Navigation",
-      "key": "ctaButtonText",
-      "type": "string",
-      "value": "Free Demo",
-      "group": ""
+    "Features": {
+      "title_before": "Powerful Features for",
+      "title_highlight": "Modern Rice Mills",
+      "groups": [
+        {
+          "feature_title": "Inventory & Stock Management",
+          "feature_desc": "Track raw materials, finished goods, and work-in-progress inventory with real-time visibility and automated alerts.",
+          "feature_icon": "Package"
+        },
+        {
+          "feature_title": "Billing & Accounting",
+          "feature_desc": "Automated invoicing, financial reporting, and seamless GST compliance with integrated accounting modules.",
+          "feature_icon": "Calculator"
+        },
+        {
+          "feature_title": "Procurement & Vendor Management",
+          "feature_desc": "Streamline supplier relationships, purchase orders, and vendor payments with complete transparency.",
+          "feature_icon": "Truck"
+        },
+        {
+          "feature_title": "Analytics Dashboard & Reports",
+          "feature_desc": "Make data-driven decisions with comprehensive analytics, KPI tracking, and customizable business reports.",
+          "feature_icon": "BarChart3"
+        }
+      ]
     }
-  ]
+  }
 }
