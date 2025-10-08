@@ -1,7 +1,41 @@
 {
-  "lastUpdated": "2025-10-08T14:25:59.946Z",
+  "lastUpdated": "2025-10-08T14:29:41.478Z",
   "sheet": "Content",
   "data": {
+    "Navigation": {
+      "logoText": "RMMS",
+      "logoIcon": "R",
+      "navLinks": "Home,Features,Pricing,Contact",
+      "ctaLoginText": "Login",
+      "groups": [
+        {
+          "ctaButtonText": "Request Demo"
+        }
+      ]
+    },
+    "Features": {
+      "groups": [
+        {
+          "feature_desc": "Track raw materials, finished goods, and work-in-progress inventory with real-time visibility and automated alerts.",
+          "feature_icon": "Package"
+        },
+        {
+          "feature_title": "Billing & Accounting",
+          "feature_desc": "Automated invoicing, financial reporting, and seamless GST compliance with integrated accounting modules.",
+          "feature_icon": "Calculator"
+        },
+        {
+          "feature_title": "Procurement & Vendor Management",
+          "feature_desc": "Streamline supplier relationships, purchase orders, and vendor payments with complete transparency.",
+          "feature_icon": "Truck"
+        },
+        {
+          "feature_title": "Analytics Dashboard & Reports",
+          "feature_desc": "Make data-driven decisions with comprehensive analytics, KPI tracking, and customizable business reports.",
+          "feature_icon": "BarChart3"
+        }
+      ]
+    },
     "Hero": {
       "title": "Empower Your Rice Mill with",
       "titleTag": "Smarter ERP Automation",
@@ -18,27 +52,6 @@
           "label": "Support"
         }
       ]
-    },
-    "Features": {
-      "groups": [
-        {
-          "feature_title": "Procurement & Vendor Management",
-          "feature_desc": "Streamline supplier relationships, purchase orders, and vendor payments with complete transparency.",
-          "feature_icon": "Truck"
-        },
-        {
-          "feature_title": "Analytics Dashboard & Reports",
-          "feature_desc": "Make data-driven decisions with comprehensive analytics, KPI tracking, and customizable business reports.",
-          "feature_icon": "BarChart3"
-        }
-      ]
-    },
-    "Navigation": {
-      "logoText": "RMMS",
-      "logoIcon": "R",
-      "navLinks": "Home,Features,Pricing,Contact",
-      "ctaLoginText": "Login",
-      "ctaButtonText": "Request Demo"
     }
   }
 }
