@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-08T16:50:15.732Z",
+  "lastUpdated": "2025-10-08T17:04:58.236Z",
   "sheet": "Content",
   "data": {
     "Features": {
@@ -40,6 +40,14 @@
       "float_value": "0.85",
       "float_label": "Efficiency Gain",
       "groups": [
+        {
+          "value": "200+",
+          "label": "Rice Mills"
+        },
+        {
+          "value": "0.999",
+          "label": "Uptime"
+        },
         {
           "value": "24/7",
           "label": "Support"
