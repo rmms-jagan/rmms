@@ -35,7 +35,7 @@ export function WhyChoose() {
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
               Why Choose{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                RicePro ERP?
+                RMMS?
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

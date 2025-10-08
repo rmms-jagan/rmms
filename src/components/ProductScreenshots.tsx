@@ -33,7 +33,7 @@ export function ProductScreenshots() {
               <div className="bg-gray-100 p-1 rounded-b-2xl">
                 <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1649881927251-46644283751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmQlMjBjb21wdXRlciUyMHNjcmVlbnxlbnwxfHx8fDE3NTk4NDM3MDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="RicePro ERP Dashboard"
+                  alt="RMMS Dashboard"
                   className="w-full h-96 object-cover rounded-lg"
                 />
               </div>

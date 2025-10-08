@@ -10,7 +10,7 @@ export function Testimonials() {
       position: "Owner, Sri Lakshmi Rice Mills",
       location: "Andhra Pradesh", 
       image: "https://images.unsplash.com/photo-1632560962689-da7c2538fc23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBlcnNvbiUyMGluZGlhbiUyMGVudHJlcHJlbmV1cnxlbnwxfHx8fDE3NTk4NDM3MTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      quote: "RicePro ERP has transformed our rice mill operations completely. We've reduced manual work by 80% and increased our profit margins by 25%. The inventory management is spot-on!",
+      quote: "RMMS has transformed our rice mill operations completely. We've reduced manual work by 80% and increased our profit margins by 25%. The inventory management is spot-on!",
       rating: 5
     },
     {
@@ -43,7 +43,7 @@ export function Testimonials() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Hear from rice mill owners who have transformed their operations with RicePro ERP.
+            Don't just take our word for it. Hear from rice mill owners who have transformed their operations with RMMS.
           </p>
         </div>
 

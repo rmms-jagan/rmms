@@ -48,10 +48,10 @@ export function Footer() {
             <div className="space-y-2">
               <div className="text-sm text-gray-400">
                 <span className="font-medium text-white">Address:</span> 
-                <br />123 Business District, Mumbai, Maharashtra 400001
+                <br />RMMS Tech. Sai Vihar,Nimakhandi, Brahmapur, Odisha 760001 
               </div>
               <div className="text-sm text-gray-400">
-                <span className="font-medium text-white">Email:</span> hello@riceproerp.com
+                <span className="font-medium text-white">Email:</span> ricemillmanagmentsystem@gmail.com
               </div>
               <div className="text-sm text-gray-400">
                 <span className="font-medium text-white">Phone:</span> +91 9970516523
