@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-08T12:11:47.726Z",
+  "lastUpdated": "2025-10-08T12:21:17.808Z",
   "sheet": "Content",
   "data": [
     {
@@ -11,9 +11,16 @@
     },
     {
       "component": "Hero",
+      "key": "titleTag",
+      "type": "string",
+      "value": "Smarter ERP Automation",
+      "group": ""
+    },
+    {
+      "component": "Hero",
       "key": "subtitle",
       "type": "string",
-      "value": "Streamline operations easily",
+      "value": "Streamline procurement, production, inventory, and sales — all in one cloud platform.",
       "group": ""
     },
     {
@@ -84,20 +91,6 @@
       "key": "ctaButtonText",
       "type": "string",
       "value": "Free Demo",
-      "group": ""
-    },
-    {
-      "component": "Hero",
-      "key": "title",
-      "type": "string",
-      "value": "Build Faster with Our Platform",
-      "group": ""
-    },
-    {
-      "component": "Hero",
-      "key": "subtitle",
-      "type": "string",
-      "value": "All your tools in one place.",
       "group": ""
     }
   ]
