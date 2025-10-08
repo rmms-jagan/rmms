@@ -1,21 +1,14 @@
 {
-  "lastUpdated": "2025-10-08T14:29:41.478Z",
+  "lastUpdated": "2025-10-08T14:39:50.711Z",
   "sheet": "Content",
   "data": {
-    "Navigation": {
-      "logoText": "RMMS",
-      "logoIcon": "R",
-      "navLinks": "Home,Features,Pricing,Contact",
-      "ctaLoginText": "Login",
-      "groups": [
-        {
-          "ctaButtonText": "Request Demo"
-        }
-      ]
-    },
     "Features": {
+      "title_before": "Powerful Features for",
+      "title_highlight": "Modern Rice Mills",
+      "subtitle": "Everything you need to digitize and optimize your rice mill operations in one comprehensive platform.",
       "groups": [
         {
+          "feature_title": "Inventory & Stock Management",
           "feature_desc": "Track raw materials, finished goods, and work-in-progress inventory with real-time visibility and automated alerts.",
           "feature_icon": "Package"
         },
@@ -52,6 +45,13 @@
           "label": "Support"
         }
       ]
+    },
+    "Navigation": {
+      "logoText": "RMMS",
+      "logoIcon": "R",
+      "navLinks": "Home,Features,Pricing,Contact",
+      "ctaLoginText": "Login",
+      "ctaButtonText": "Request Demo"
     }
   }
 }
