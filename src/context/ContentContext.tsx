@@ -1,63 +1,58 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-interface ContentEntry {
-  component: string;
-  key: string;
-  value: string;
+interface GroupEntry {
+    [key: string]: string;
 }
 
+interface ComponentContent {
+    groups?: GroupEntry[];                       // Explicit groups property
+    [key: string]: string | GroupEntry[] | undefined; // Allow strings, arrays, or undefined
+}
 interface ContentContextType {
-  content: Record<string, Record<string, string>>;
-  loading: boolean;
-  error?: string;
+    content: Record<string, ComponentContent>;
+    loading: boolean;
+    error?: string;
 }
 
 const ContentContext = createContext<ContentContextType>({
-  content: {},
-  loading: true,
+    content: {},
+    loading: true,
 });
 
 export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [content, setContent] = useState<Record<string, Record<string, string>>>({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string>();
+    const [content, setContent] = useState<Record<string, ComponentContent>>({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string>();
 
-  useEffect(() => {
-    // ✅ Use Vite's base URL dynamically
-    const jsonUrl = `${import.meta.env.BASE_URL}cache.json`;
-    console.log("🌀 Fetching content from:", jsonUrl);
+    useEffect(() => {
+        const jsonUrl = new URL(`${import.meta.env.BASE_URL}cache.json`, window.location.origin).href;
+        console.log("🌀 Fetching content from:", jsonUrl);
 
-    fetch(jsonUrl)
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
-        return res.json();
-      })
-      .then((data) => {
-        // ✅ Transform flat sheet data into { component: { key: value } } shape
-        const grouped: Record<string, Record<string, string>> = {};
-        data.data.forEach((item: ContentEntry) => {
-          if (!grouped[item.component]) grouped[item.component] = {};
-          grouped[item.component][item.key] = item.value;
-        });
+        fetch(jsonUrl)
+            .then((res) => {
+                if (!res.ok) throw new Error(`Failed to fetch cache.json: ${res.status}`);
+                return res.json();
+            })
+            .then((data) => {
+                if (!data || !data.data) throw new Error("Invalid content format");
+                setContent(data.data);
+                console.log("✅ CMS Content loaded:", data.data);
+            })
+            .catch((err) => {
+                console.error("❌ Error loading content:", err);
+                setError(err.message);
+            })
+            .finally(() => setLoading(false));
+    }, []);
 
-        setContent(grouped);
-        console.log("✅ Content loaded:", grouped);
-      })
-      .catch((err) => {
-        console.error("❌ Error loading content:", err);
-        setError(err.message);
-      })
-      .finally(() => setLoading(false));
-  }, []);
-
-  return (
-    <ContentContext.Provider value={{ content, loading, error }}>
-      {children}
-    </ContentContext.Provider>
-  );
+    return (
+        <ContentContext.Provider value={{ content, loading, error }}>
+            {children}
+        </ContentContext.Provider>
+    );
 };
 
-export function useContent(component: string) {
-  const { content } = useContext(ContentContext);
-  return content[component] || {};
+export function useContent(component: string): ComponentContent {
+    const { content } = useContext(ContentContext);
+    return content[component] || {};
 }
