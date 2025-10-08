@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-08T14:19:54.722Z",
+  "lastUpdated": "2025-10-08T14:25:59.946Z",
   "sheet": "Content",
   "data": {
     "Hero": {
@@ -32,6 +32,13 @@
           "feature_icon": "BarChart3"
         }
       ]
+    },
+    "Navigation": {
+      "logoText": "RMMS",
+      "logoIcon": "R",
+      "navLinks": "Home,Features,Pricing,Contact",
+      "ctaLoginText": "Login",
+      "ctaButtonText": "Request Demo"
     }
   }
 }
