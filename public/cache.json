@@ -1,33 +1,26 @@
 {
-  "lastUpdated": "2025-10-08T13:12:55.561Z",
+  "lastUpdated": "2025-10-08T14:19:54.722Z",
   "sheet": "Content",
   "data": {
     "Hero": {
-      "title": "Empower your rice mill",
+      "title": "Empower Your Rice Mill with",
       "titleTag": "Smarter ERP Automation",
       "subtitle": "Streamline procurement, production, inventory, and sales — all in one cloud platform.",
-      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n"
-    },
-    "Navigation": {
-      "logoText": "RMMS",
-      "navLinks": "Features,Solutions,Pricing,About",
-      "ctaLoginText": "Login",
-      "ctaButtonText": "Free Demo"
-    },
-    "Features": {
-      "title_before": "Powerful Features for",
-      "title_highlight": "Modern Rice Mills",
+      "cta_text": "Request a Demo",
+      "cta_secondary": "Watch Video",
+      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
+      "image_alt": "Rice mill with digital automation",
+      "float_value": "0.85",
+      "float_label": "Efficiency Gain",
       "groups": [
         {
-          "feature_title": "Inventory & Stock Management",
-          "feature_desc": "Track raw materials, finished goods, and work-in-progress inventory with real-time visibility and automated alerts.",
-          "feature_icon": "Package"
-        },
-        {
-          "feature_title": "Billing & Accounting",
-          "feature_desc": "Automated invoicing, financial reporting, and seamless GST compliance with integrated accounting modules.",
-          "feature_icon": "Calculator"
-        },
+          "value": "24/7",
+          "label": "Support"
+        }
+      ]
+    },
+    "Features": {
+      "groups": [
         {
           "feature_title": "Procurement & Vendor Management",
           "feature_desc": "Streamline supplier relationships, purchase orders, and vendor payments with complete transparency.",
