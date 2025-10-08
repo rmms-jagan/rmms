@@ -1,0 +1,62 @@
+{
+  "lastUpdated": "2025-10-08T11:42:51.429Z",
+  "sheet": "Content",
+  "data": [
+    {
+      "component": "Hero",
+      "key": "title",
+      "type": "string",
+      "value": "Empower your rice mill",
+      "group": ""
+    },
+    {
+      "component": "Hero",
+      "key": "subtitle",
+      "type": "string",
+      "value": "Streamline operations easily",
+      "group": ""
+    },
+    {
+      "component": "Hero",
+      "key": "image",
+      "type": "string",
+      "value": "https://...hero.jpg",
+      "group": ""
+    },
+    {
+      "component": "Features",
+      "key": "title",
+      "type": "string",
+      "value": "Powerful Features",
+      "group": ""
+    },
+    {
+      "component": "Features",
+      "key": "feature_title",
+      "type": "string",
+      "value": "Real-time Dashboard",
+      "group": "f1"
+    },
+    {
+      "component": "Features",
+      "key": "feature_desc",
+      "type": "string",
+      "value": "Monitor KPIs in real time",
+      "group": "f1"
+    },
+    {
+      "component": "Features",
+      "key": "feature_title",
+      "type": "string",
+      "value": "Smart Inventory",
+      "group": "f2"
+    },
+    {
+      "component": "Features",
+      "key": "feature_desc",
+      "type": "string",
+      "value": "Predict shortages, auto-order",
+      "group": "f2"
+    }
+  ]
+}
