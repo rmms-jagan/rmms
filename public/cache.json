@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-08T11:42:51.429Z",
+  "lastUpdated": "2025-10-08T12:11:47.726Z",
   "sheet": "Content",
   "data": [
     {
@@ -20,7 +20,7 @@
       "component": "Hero",
       "key": "image",
       "type": "string",
-      "value": "https://...hero.jpg",
+      "value": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
       "group": ""
     },
     {
@@ -57,6 +57,48 @@
       "type": "string",
       "value": "Predict shortages, auto-order",
       "group": "f2"
+    },
+    {
+      "component": "Navigation",
+      "key": "logoText",
+      "type": "string",
+      "value": "RMMS",
+      "group": ""
+    },
+    {
+      "component": "Navigation",
+      "key": "navLinks",
+      "type": "string",
+      "value": "Features,Solutions,Pricing,About",
+      "group": ""
+    },
+    {
+      "component": "Navigation",
+      "key": "ctaLoginText",
+      "type": "string",
+      "value": "Login",
+      "group": ""
+    },
+    {
+      "component": "Navigation",
+      "key": "ctaButtonText",
+      "type": "string",
+      "value": "Free Demo",
+      "group": ""
+    },
+    {
+      "component": "Hero",
+      "key": "title",
+      "type": "string",
+      "value": "Build Faster with Our Platform",
+      "group": ""
+    },
+    {
+      "component": "Hero",
+      "key": "subtitle",
+      "type": "string",
+      "value": "All your tools in one place.",
+      "group": ""
     }
   ]
 }
