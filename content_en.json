@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-09T17:06:36.546Z",
+  "lastUpdated": "2025-10-09T17:34:11.631Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -61,6 +61,34 @@
       "navLinks": "Home,Features,Pricing,Contact",
       "ctaLoginText": "Login",
       "ctaButtonText": "Free Demo"
+    },
+    "component": {
+      "key": ""
+    },
+    "HowItWorks": {
+      "headingPrefix": "How It",
+      "headingHighlight": "Works",
+      "subheading": "Get started with RMMS in three simple steps",
+      "groups": [
+        {
+          "step": "1",
+          "icon": "Database",
+          "title": "Add Your Rice Mill Data",
+          "description": "Import your existing data or start fresh with our intuitive setup wizard. Configure your mill's specific processes and workflows."
+        },
+        {
+          "step": "2",
+          "icon": "Settings",
+          "title": "Automate Daily Operations",
+          "description": "Let RMMS handle routine tasks like inventory tracking, billing, procurement, and vendor management automatically."
+        },
+        {
+          "step": "3",
+          "icon": "TrendingUp",
+          "title": "Monitor and Grow with Insights",
+          "description": "Access real-time dashboards and analytics to make informed decisions and scale your rice mill operations efficiently."
+        }
+      ]
     }
   }
 }
