@@ -1,0 +1,66 @@
+{
+  "lastUpdated": "2025-10-09T15:04:27.630Z",
+  "language": "value_en",
+  "sheet": "Content",
+  "data": {
+    "Features": {
+      "title_before": "Powerful Features for",
+      "title_highlight": "Modern Rice Mills",
+      "subtitle": "Everything you need to digitize and optimize your rice mill operations in one comprehensive platform.",
+      "groups": [
+        {
+          "feature_title": "Inventory & Stock Management",
+          "feature_desc": "Track raw materials, finished goods, and work-in-progress inventory with real-time visibility and automated alerts.",
+          "feature_icon": "Package"
+        },
+        {
+          "feature_title": "Billing & Accounting",
+          "feature_desc": "Automated invoicing, financial reporting, and seamless GST compliance with integrated accounting modules.",
+          "feature_icon": "Calculator"
+        },
+        {
+          "feature_title": "Procurement & Vendor Management",
+          "feature_desc": "Streamline supplier relationships, purchase orders, and vendor payments with complete transparency.",
+          "feature_icon": "Truck"
+        },
+        {
+          "feature_title": "Analytics Dashboard & Reports",
+          "feature_desc": "Make data-driven decisions with comprehensive analytics, KPI tracking, and customizable business reports.",
+          "feature_icon": "BarChart3"
+        }
+      ]
+    },
+    "Hero": {
+      "title": "Empower Your Rice Mill with",
+      "titleTag": "Smarter ERP Automation",
+      "subtitle": "Streamline procurement, production, inventory, and sales — all in one cloud platform.",
+      "cta_text": "Request a Demo",
+      "cta_secondary": "Watch Video",
+      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
+      "image_alt": "Rice mill with digital automation",
+      "float_value": "0.85",
+      "float_label": "Efficiency Gain",
+      "groups": [
+        {
+          "value": "200+",
+          "label": "Rice Mills"
+        },
+        {
+          "value": "0.999",
+          "label": "Uptime"
+        },
+        {
+          "value": "24/7",
+          "label": "Support"
+        }
+      ]
+    },
+    "Navigation": {
+      "logoText": "RMMS",
+      "logoIcon": "R",
+      "navLinks": "Home,Features,Pricing,Contact",
+      "ctaLoginText": "Login",
+      "ctaButtonText": "Free Demo"
+    }
+  }
+}
