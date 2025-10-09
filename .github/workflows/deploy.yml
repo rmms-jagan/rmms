@@ -1,31 +1,64 @@
-name: Deploy Vite App to GitHub Pages
+name: 🚀 Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # runs every time you push to main
+      - main  # Trigger on every push to main
+
+permissions:
+  contents: write  # Required for pushing to gh-pages branch
+  pages: write     # Required for GitHub Pages deployment
+  id-token: write  # Required for OIDC authentication
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
-      - name: Checkout code
+      # 🧩 Checkout latest code
+      - name: 🧩 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Node
+      # ⚙️ Setup Node.js (use Node 20 for modern Vite)
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
+      # 📦 Install dependencies
+      - name: 📦 Install dependencies
+        run: npm ci
 
-      - name: Build the app
+      # 🏗️ Build Vite app
+      - name: 🏗️ Build the Vite app
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      # 🚀 Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./build
+          publish_dir: ./dist
+
+  # 👇 Wait for Pages deployment to complete
+  wait-for-pages:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🕐 Wait for GitHub Pages deployment
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: https://api.github.com/repos/${{ github.repository }}/pages/deployment
+          method: GET
+          customHeaders: '{"Accept": "application/vnd.github+json"}'
+          bearerToken: ${{ secrets.GITHUB_TOKEN }}
+          timeout: 300000  # wait up to 5 minutes
+          retryCount: 30
+          retryInterval: 10
+
+      - name: ✅ Deployment check complete
+        run: echo "GitHub Pages deployment completed successfully."
