@@ -1,0 +1,66 @@
+{
+  "lastUpdated": "2025-10-09T17:06:36.546Z",
+  "language": "hi",
+  "sheet": "Content",
+  "data": {
+    "Features": {
+      "title_before": "शक्तिशाली विशेषताएँ",
+      "title_highlight": "आधुनिक राइस मिलों के लिए",
+      "subtitle": "एक ही प्लेटफ़ॉर्म पर अपनी राइस मिल के सभी कार्यों को डिजिटल और अनुकूलित करने के लिए जो कुछ भी चाहिए।",
+      "groups": [
+        {
+          "feature_title": "इन्वेंटरी और स्टॉक प्रबंधन",
+          "feature_desc": "कच्चे माल, तैयार माल और कार्य प्रगति में इन्वेंटरी को रियल-टाइम में ट्रैक करें और स्वचालित अलर्ट प्राप्त करें।",
+          "feature_icon": "Package"
+        },
+        {
+          "feature_title": "बिलिंग और लेखा प्रबंधन",
+          "feature_desc": "स्वचालित चालान, वित्तीय रिपोर्टिंग और एकीकृत लेखांकन मॉड्यूल के साथ सहज जीएसटी अनुपालन।",
+          "feature_icon": "Calculator"
+        },
+        {
+          "feature_title": "खरीद और विक्रेता प्रबंधन",
+          "feature_desc": "आपूर्तिकर्ताओं के साथ संबंध, खरीद आदेश और भुगतान को पूरी पारदर्शिता के साथ सरल बनाएं।",
+          "feature_icon": "Truck"
+        },
+        {
+          "feature_title": "एनालिटिक्स डैशबोर्ड और रिपोर्ट",
+          "feature_desc": "व्यापक विश्लेषण, KPI ट्रैकिंग और अनुकूलित रिपोर्टों के साथ डेटा-आधारित निर्णय लें।",
+          "feature_icon": "BarChart3"
+        }
+      ]
+    },
+    "Hero": {
+      "title": "अपने राइस मिल को सशक्त बनाएं",
+      "titleTag": "स्मार्ट ईआरपी ऑटोमेशन के साथ",
+      "subtitle": "खरीद, उत्पादन, इन्वेंटरी और बिक्री — सब कुछ एक ही क्लाउड प्लेटफ़ॉर्म पर सुव्यवस्थित करें।",
+      "cta_text": "डेमो का अनुरोध करें",
+      "cta_secondary": "वीडियो देखें",
+      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
+      "image_alt": "डिजिटल ऑटोमेशन के साथ राइस मिल",
+      "float_value": "0.85",
+      "float_label": "दक्षता वृद्धि",
+      "groups": [
+        {
+          "value": "200+",
+          "label": "राइस मिल्स"
+        },
+        {
+          "value": "0.999",
+          "label": "अपटाइम"
+        },
+        {
+          "value": "24/7",
+          "label": "समर्थन"
+        }
+      ]
+    },
+    "Navigation": {
+      "logoText": "RMMS",
+      "logoIcon": "R",
+      "navLinks": "Home,Features,Pricing,Contact",
+      "ctaLoginText": "Login",
+      "ctaButtonText": "Free Demo"
+    }
+  }
+}

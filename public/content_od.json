@@ -1,0 +1,66 @@
+{
+  "lastUpdated": "2025-10-09T17:06:36.546Z",
+  "language": "od",
+  "sheet": "Content",
+  "data": {
+    "Features": {
+      "title_before": "ଶକ୍ତିଶାଳୀ ବିଶେଷତା",
+      "title_highlight": "ଆଧୁନିକ ଧାନ ଚକି ପାଇଁ",
+      "subtitle": "ଆପଣଙ୍କ ଧାନ ଚକିକୁ ଡିଜିଟାଲ ଏବଂ ଅପ୍ଟିମାଇଜ୍ କରିବା ପାଇଁ ଆବଶ୍ୟକ ସମସ୍ତ ବୈଶିଷ୍ଟ୍ୟ ଏକ ସଂପୂର୍ଣ୍ଣ ପ୍ଲାଟଫର୍ମରେ।",
+      "groups": [
+        {
+          "feature_title": "ଇନଭେଣ୍ଟୋରି ଏବଂ ଷ୍ଟକ୍ ପରିଚାଳନା",
+          "feature_desc": "କଚ୍ଚା ସାମଗ୍ରୀ, ସମାପ୍ତ ସାମଗ୍ରୀ ଏବଂ ଚାଲୁ ତିଆରି ହେଉଥିବା ଇନଭେଣ୍ଟୋରିକୁ ରିଅଲ୍-ଟାଇମରେ ଟ୍ରାକ୍ କରନ୍ତୁ ଏବଂ ସ୍ୱୟଂଚାଳିତ ଆଲର୍ଟ ପାଆନ୍ତୁ।",
+          "feature_icon": "Package"
+        },
+        {
+          "feature_title": "ବିଲିଂ ଏବଂ ହିସାବ ପରିଚାଳନା",
+          "feature_desc": "ସ୍ୱୟଂଚାଳିତ ଇନଭୋଇସିଂ, ଆର୍ଥିକ ରିପୋର୍ଟ ଏବଂ ସହଜ ଜିଏସଟି ଅନୁସାରଣ ସହିତ ଏକତ୍ରିତ ହିସାବ ପ୍ରଣାଳୀ।",
+          "feature_icon": "Calculator"
+        },
+        {
+          "feature_title": "କ୍ରୟ ଏବଂ ବିକ୍ରେତା ପରିଚାଳନା",
+          "feature_desc": "ପ୍ରଦାନକାରୀ ସହ ସମ୍ପର୍କ, କ୍ରୟ ଆଦେଶ ଏବଂ ପେମେଣ୍ଟକୁ ସମ୍ପୂର୍ଣ୍ଣ ପ୍ରସ୍ପଷ୍ଟତା ସହିତ ସହଜ କରନ୍ତୁ।",
+          "feature_icon": "Truck"
+        },
+        {
+          "feature_title": "ଏନାଲିଟିକ୍ସ ଡ୍ୟାସ୍‌ବୋର୍ଡ ଏବଂ ରିପୋର୍ଟ",
+          "feature_desc": "ବିସ୍ତୃତ ବିଶ୍ଳେଷଣ, KPI ଟ୍ରାକିଂ ଏବଂ ଅନୁକୁଳିତ ରିପୋର୍ଟ ସହିତ ତଥ୍ୟ ଆଧାରିତ ସିଦ୍ଧାନ୍ତ ନିଅନ୍ତୁ।",
+          "feature_icon": "BarChart3"
+        }
+      ]
+    },
+    "Hero": {
+      "title": "ଆପଣଙ୍କ ଧାନ ଚକିକୁ ସଶକ୍ତ କରନ୍ତୁ",
+      "titleTag": "ସ୍ମାର୍ଟ ଇଆର୍ପି ଅଟୋମେସନ ସହିତ",
+      "subtitle": "କ୍ରୟ, ଉତ୍ପାଦନ, ଇନଭେଣ୍ଟୋରି ଏବଂ ବିକ୍ରୟ — ସବୁକିଛି ଏକ କ୍ଲାଉଡ୍ ପ୍ଲାଟଫର୍ମରେ ସମନ୍ବିତ କରନ୍ତୁ।",
+      "cta_text": "ଡେମୋ ଅନୁରୋଧ କରନ୍ତୁ",
+      "cta_secondary": "ଭିଡିଓ ଦେଖନ୍ତୁ",
+      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
+      "image_alt": "ଡିଜିଟାଲ ଅଟୋମେସନ ସହିତ ଧାନ ଚକି",
+      "float_value": "0.85",
+      "float_label": "କାର୍ଯ୍ୟକୁଶଳତା ବୃଦ୍ଧି",
+      "groups": [
+        {
+          "value": "200+",
+          "label": "Rice Mills"
+        },
+        {
+          "value": "0.999",
+          "label": "ଅପ୍‌ଟାଇମ୍"
+        },
+        {
+          "value": "24/7",
+          "label": "Support"
+        }
+      ]
+    },
+    "Navigation": {
+      "logoText": "RMMS",
+      "logoIcon": "R",
+      "navLinks": "Home,Features,Pricing,Contact",
+      "ctaLoginText": "Login",
+      "ctaButtonText": "Free Demo"
+    }
+  }
+}
