@@ -3,26 +3,44 @@ name: Deploy Vite App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Only run for main branch
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repo
+      # 1️⃣ Checkout full history
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # important for git diff to work
 
       # 2️⃣ Detect if only content JSONs changed
       - name: Check for JSON-only changes
         id: check_changes
         run: |
-          echo "🧮 Checking for changed files..."
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          echo "🧮 Checking changed files..."
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.sha }}"
+
+          if [ -z "$BEFORE_SHA" ]; then
+            echo "⚠️ No previous commit found (first push or rebase). Forcing build."
+            echo "build_needed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          CHANGED_FILES=$(git diff --name-only "$BEFORE_SHA" "$AFTER_SHA" || true)
           echo "$CHANGED_FILES"
-          
-          # If any non-content file changed, mark as build needed
+
+          # If no changed files, still build to be safe
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "⚠️ No changed files detected. Forcing build."
+            echo "build_needed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # If any file other than content_*.json changed, build
           if echo "$CHANGED_FILES" | grep -qvE '^public/content_.*\.json$'; then
             echo "build_needed=true" >> $GITHUB_OUTPUT
           else
@@ -36,20 +54,18 @@ jobs:
           echo "✅ Only content JSONs changed — skipping build & deploy."
           exit 0
 
-      # 4️⃣ Setup Node.js
+      # 4️⃣ Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 5️⃣ Install dependencies (smart install)
+      # 5️⃣ Install dependencies (safe fallback)
       - name: 📦 Install dependencies
         run: |
           if [ -f package-lock.json ]; then
-            echo "🔒 Installing using npm ci"
             npm ci
           else
-            echo "⚙️ No lock file found — using npm install"
             npm install
           fi
 
