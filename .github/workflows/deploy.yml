@@ -1,39 +1,65 @@
-name: 🚀 Deploy Vite App to GitHub Pages
+name: Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Deploy whenever Apps Script or code pushes to main
-
-permissions:
-  contents: write  # required for Pages deploy
+      - main  # Only run for main branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧩 Checkout repository
+      # 1️⃣ Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # ensures we get full commit history (important for GH Pages)
 
-      - name: ⚙️ Setup Node.js
+      # 2️⃣ Detect if only content JSONs changed
+      - name: Check for JSON-only changes
+        id: check_changes
+        run: |
+          echo "🧮 Checking for changed files..."
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          echo "$CHANGED_FILES"
+          
+          # If any non-content file changed, mark as build needed
+          if echo "$CHANGED_FILES" | grep -qvE '^public/content_.*\.json$'; then
+            echo "build_needed=true" >> $GITHUB_OUTPUT
+          else
+            echo "build_needed=false" >> $GITHUB_OUTPUT
+          fi
+
+      # 3️⃣ Stop workflow early if only JSON files changed
+      - name: Skip build
+        if: steps.check_changes.outputs.build_needed == 'false'
+        run: |
+          echo "✅ Only content JSONs changed — skipping build & deploy."
+          exit 0
+
+      # 4️⃣ Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
+      # 5️⃣ Install dependencies (smart install)
       - name: 📦 Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            echo "🔒 Installing using npm ci"
+            npm ci
+          else
+            echo "⚙️ No lock file found — using npm install"
+            npm install
+          fi
 
-      - name: 🏗️ Build the Vite app
+      # 6️⃣ Build the app
+      - name: 🏗️ Build the app
         run: npm run build
 
-      # 👇 Ensure this path matches your Vite output folder
-      # By default, Vite builds into `dist/`
+      # 7️⃣ Deploy to GitHub Pages
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./dist
+          publish_dir: ./build
