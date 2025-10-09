@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-09T17:34:11.631Z",
+  "lastUpdated": "2025-10-09T17:37:48.005Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -61,9 +61,6 @@
       "navLinks": "Home,Features,Pricing,Contact",
       "ctaLoginText": "Login",
       "ctaButtonText": "Free Demo"
-    },
-    "component": {
-      "key": ""
     },
     "HowItWorks": {
       "headingPrefix": "How It",
