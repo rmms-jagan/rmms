@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:12:26.448Z",
+  "lastUpdated": "2025-10-10T13:25:07.510Z",
   "language": "hi",
   "sheet": "Content",
   "data": {
@@ -128,6 +128,11 @@
           "benefit_icon": "Shield",
           "benefit_title": "सुरक्षित",
           "benefit_desc": "डेटा एन्क्रिप्शन, भूमिका आधारित पहुंच और अनुपालन मानकों के साथ बैंक-स्तरीय सुरक्षा।"
+        },
+        {
+          "benefit_icon": "Headphones",
+          "benefit_title": "24x7 सहायता",
+          "benefit_desc": "हमारी समर्पित ग्राहक सहायता टीम से जब भी आपको ज़रूरत हो, विशेषज्ञ सहायता प्राप्त करें।"
         },
         {
           "stat_value": "200+",

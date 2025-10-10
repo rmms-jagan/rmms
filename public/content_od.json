@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:12:26.448Z",
+  "lastUpdated": "2025-10-10T13:25:07.510Z",
   "language": "od",
   "sheet": "Content",
   "data": {
@@ -128,6 +128,11 @@
           "benefit_icon": "Shield",
           "benefit_title": "ସୁରକ୍ଷିତ",
           "benefit_desc": "ତଥ୍ୟ ଇନ୍‌କ୍ରିପ୍ସନ୍‌, ଭୂମିକା ଆଧାରିତ ଆକ୍ସେସ୍ ଏବଂ ମାନକ ଅନୁସାରିତା ସହିତ ବ୍ୟାଙ୍କ ସ୍ତରର ସୁରକ୍ଷା।"
+        },
+        {
+          "benefit_icon": "Headphones",
+          "benefit_title": "24x7 ସହଯୋଗ",
+          "benefit_desc": "ଆପଣଙ୍କ ଆବଶ୍ୟକତା ସମୟରେ ଆମ ନିର୍ଦ୍ଦିଷ୍ଟ ଗ୍ରାହକ ସହଯୋଗ ଦଳରୁ ଦକ୍ଷ ସହାୟତା ପାଆନ୍ତୁ।"
         },
         {
           "stat_value": "200+",
