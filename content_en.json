@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T06:35:01.584Z",
+  "lastUpdated": "2025-10-10T11:27:31.871Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -84,6 +84,32 @@
           "icon": "TrendingUp",
           "title": "Monitor and Grow with Insights",
           "description": "Access real-time dashboards and analytics to make informed decisions and scale your rice mill operations efficiently."
+        }
+      ]
+    },
+    "ProductScreenshots": {
+      "headingPrefix": "All Your Operations in",
+      "headingHighlight": "One Smart Dashboard",
+      "subheading": "Experience the power of unified rice mill management with our intuitive dashboard interface.",
+      "screenshots.desktop": "https://images.unsplash.com/photo-1649881927251-46644283751a?auto=format&fit=crop&w=1200&q=80",
+      "screenshots.mobile": "https://images.unsplash.com/photo-1519337364444-c5eeec430101?auto=format&fit=crop&w=800&q=80",
+      "desktopAlt": "RMMS Dashboard",
+      "mobileAlt": "Mobile Dashboard",
+      "groups": [
+        {
+          "icon": "📊",
+          "title": "Real-time Analytics",
+          "description": "Monitor your mill's performance with live data and insights."
+        },
+        {
+          "icon": "📱",
+          "title": "Mobile Access",
+          "description": "Access your dashboard anywhere with our responsive mobile interface."
+        },
+        {
+          "icon": "🔧",
+          "title": "Customizable",
+          "description": "Tailor the dashboard to match your specific operational needs."
         }
       ]
     }
