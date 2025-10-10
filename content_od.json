@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:10:48.657Z",
+  "lastUpdated": "2025-10-10T13:12:26.448Z",
   "language": "od",
   "sheet": "Content",
   "data": {
@@ -115,17 +115,17 @@
     },
     "WhyChoose": {
       "title_prefix": "କାହିଁକି ବାଛନ୍ତି",
-      "title_highlight": "ଆର୍‌ଏମ୍‌ଏମ୍‌ଏସ୍‌?",
+      "title_highlight": "RMMS?",
       "subtitle": "ଶତାଧିକ ଧାନ ମିଲ୍ ମାଲିକମାନଙ୍କ ସହ ଯୋଗ ଦିଅନ୍ତୁ ଯିଏ ଆମ ଭରସାଯୋଗ୍ୟ ପ୍ଲାଟଫର୍ମ ସହିତ ତାଙ୍କ ଅଭିଯାନକୁ ପରିବର୍ତ୍ତନ କରିଛନ୍ତି।",
       "trust_badge": "ଭାରତରେ 200+ ମିଲ୍‌ ଦ୍ୱାରା ଭରସାଯୋଗ୍ୟ",
       "groups": [
         {
-          "benefit_icon": "",
-          "benefit_title": "କ୍ଲାଉଡ୍ ଆଧାରିତ",
+          "benefit_icon": "Cloud",
+          "benefit_title": "Cloud-based",
           "benefit_desc": "ସୁରକ୍ଷିତ କ୍ଲାଉଡ୍ ଭିତ୍ତିଭୂମି ଏବଂ ସ୍ୱୟଂଚାଳିତ ବ୍ୟାକଅପ୍ ସହିତ କେଉଁଠୁ ମଧ୍ୟ ଆପଣଙ୍କ ତଥ୍ୟ ଆକ୍ସେସ୍ କରନ୍ତୁ।"
         },
         {
-          "benefit_icon": "",
+          "benefit_icon": "Shield",
           "benefit_title": "ସୁରକ୍ଷିତ",
           "benefit_desc": "ତଥ୍ୟ ଇନ୍‌କ୍ରିପ୍ସନ୍‌, ଭୂମିକା ଆଧାରିତ ଆକ୍ସେସ୍ ଏବଂ ମାନକ ଅନୁସାରିତା ସହିତ ବ୍ୟାଙ୍କ ସ୍ତରର ସୁରକ୍ଷା।"
         },
