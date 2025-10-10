@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T11:32:48.435Z",
+  "lastUpdated": "2025-10-10T13:10:48.657Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -110,6 +110,32 @@
           "icon": "🔧",
           "title": "Customizable",
           "description": "Tailor the dashboard to match your specific operational needs."
+        }
+      ]
+    },
+    "WhyChoose": {
+      "title_prefix": "Why Choose",
+      "title_highlight": "RMMS?",
+      "subtitle": "Join hundreds of rice mill owners who have transformed their operations with our trusted platform.",
+      "trust_badge": "Trusted by 200+ mills across India",
+      "groups": [
+        {
+          "benefit_icon": "Cloud",
+          "benefit_title": "Cloud-based",
+          "benefit_desc": "Access your data from anywhere with secure cloud infrastructure and automatic backups."
+        },
+        {
+          "benefit_icon": "Shield",
+          "benefit_title": "Secure",
+          "benefit_desc": "Bank-level security with data encryption, role-based access, and compliance standards."
+        },
+        {
+          "stat_value": "200+",
+          "stat_label": "Rice Mills"
+        },
+        {
+          "stat_value": "0.999",
+          "stat_label": "Uptime SLA"
         }
       ]
     }
