@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T11:27:31.871Z",
+  "lastUpdated": "2025-10-10T11:32:48.435Z",
   "language": "od",
   "sheet": "Content",
   "data": {
@@ -91,8 +91,8 @@
       "headingPrefix": "ଆପଣଙ୍କ ସମସ୍ତ କାର୍ଯ୍ୟ ଏକେ ସ୍ଥାନରେ",
       "headingHighlight": "ଏକ ସ୍ମାର୍ଟ ଡ୍ୟାସ୍‌ବୋର୍ଡ",
       "subheading": "ଆମ ସୁବୋଧ ଡ୍ୟାସ୍‌ବୋର୍ଡ ଇଣ୍ଟରଫେସ ସହିତ ଏକତ୍ର ଧାନ ମିଲ୍ ପରିଚାଳନାର ଶକ୍ତି ଅନୁଭବ କରନ୍ତୁ।",
-      "screenshots.desktop": "(same)",
-      "screenshots.mobile": "(same)",
+      "screenshots.desktop": "https://images.unsplash.com/photo-1649881927251-46644283751a?auto=format&fit=crop&w=1200&q=80",
+      "screenshots.mobile": "https://images.unsplash.com/photo-1519337364444-c5eeec430101?auto=format&fit=crop&w=800&q=80",
       "desktopAlt": "ଆରଏମଏମଏସ ଡ୍ୟାସ୍‌ବୋର୍ଡ",
       "mobileAlt": "ମୋବାଇଲ୍ ଡ୍ୟାସ୍‌ବୋର୍ଡ",
       "groups": [
