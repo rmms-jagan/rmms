@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:25:07.510Z",
+  "lastUpdated": "2025-10-10T13:47:57.629Z",
   "language": "od",
   "sheet": "Content",
   "data": {
@@ -128,6 +128,11 @@
           "benefit_icon": "Shield",
           "benefit_title": "ସୁରକ୍ଷିତ",
           "benefit_desc": "ତଥ୍ୟ ଇନ୍‌କ୍ରିପ୍ସନ୍‌, ଭୂମିକା ଆଧାରିତ ଆକ୍ସେସ୍ ଏବଂ ମାନକ ଅନୁସାରିତା ସହିତ ବ୍ୟାଙ୍କ ସ୍ତରର ସୁରକ୍ଷା।"
+        },
+        {
+          "benefit_icon": "Settings",
+          "benefit_title": "ଇଚ୍ଛାନୁସାରେ ସଂଶୋଧନୀୟ",
+          "benefit_desc": "ଆପଣଙ୍କ ଧାନ ଚାକି ପ୍ରକ୍ରିୟାକୁ ଅନୁଯାୟୀ ଯୋଗ୍ୟ ବିନ୍ୟାସ ବିକଳ୍ପ ସହିତ ସିଷ୍ଟମ୍‌କୁ ଅନୁକୁଳ କରନ୍ତୁ।"
         },
         {
           "benefit_icon": "Headphones",

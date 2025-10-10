@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:25:07.510Z",
+  "lastUpdated": "2025-10-10T13:47:57.629Z",
   "language": "hi",
   "sheet": "Content",
   "data": {
@@ -128,6 +128,11 @@
           "benefit_icon": "Shield",
           "benefit_title": "सुरक्षित",
           "benefit_desc": "डेटा एन्क्रिप्शन, भूमिका आधारित पहुंच और अनुपालन मानकों के साथ बैंक-स्तरीय सुरक्षा।"
+        },
+        {
+          "benefit_icon": "Settings",
+          "benefit_title": "अनुकूलन योग्य",
+          "benefit_desc": "अपने विशिष्ट राइस मिल प्रक्रियाओं के अनुसार सिस्टम को लचीले कॉन्फ़िगरेशन विकल्पों के साथ अनुकूलित करें।"
         },
         {
           "benefit_icon": "Headphones",
