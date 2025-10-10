@@ -1,20 +1,78 @@
 import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useContent } from "../context/ContentContext";
+
+// ✅ Define the expected CMS content structure
+interface ProductScreenshotsContent {
+  headingPrefix?: string;
+  headingHighlight?: string;
+  subheading?: string;
+  screenshots?: {
+    desktop?: string;
+    mobile?: string;
+  } | string; // Sometimes CMS returns a string
+  desktopAlt?: string;
+  mobileAlt?: string;
+  features?: {
+    icon?: string;
+    title?: string;
+    description?: string;
+  }[];
+}
 
 export function ProductScreenshots() {
+  // ✅ Get dynamic CMS content, safely typed
+  const c = useContent("ProductScreenshots") as ProductScreenshotsContent;
+
+  // ✅ Safe fallback for screenshots
+  const screenshots =
+    typeof c.screenshots === "object" && c.screenshots !== null
+      ? c.screenshots
+      : {
+        desktop:
+          "https://images.unsplash.com/photo-1649881927251-46644283751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
+        mobile:
+          "https://images.unsplash.com/photo-1519337364444-c5eeec430101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
+      };
+
+  const features =
+    c.features && Array.isArray(c.features) && c.features.length > 0
+      ? c.features
+      : [
+        {
+          icon: "📊",
+          title: "Real-time Analytics",
+          description:
+            "Monitor your mill's performance with live data and insights.",
+        },
+        {
+          icon: "📱",
+          title: "Mobile Access",
+          description:
+            "Access your dashboard anywhere with our responsive mobile interface.",
+        },
+        {
+          icon: "🔧",
+          title: "Customizable",
+          description:
+            "Tailor the dashboard to match your specific operational needs.",
+        },
+      ];
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
-            All Your Operations in{" "}
+            {c.headingPrefix || "All Your Operations in"}{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              One Smart Dashboard
+              {c.headingHighlight || "One Smart Dashboard"}
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience the power of unified rice mill management with our intuitive dashboard interface.
+            {c.subheading ||
+              "Experience the power of unified rice mill management with our intuitive dashboard interface."}
           </p>
         </div>
 
@@ -31,9 +89,9 @@ export function ProductScreenshots() {
                 </div>
               </div>
               <div className="bg-gray-100 p-1 rounded-b-2xl">
-                <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1649881927251-46644283751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmQlMjBjb21wdXRlciUyMHNjcmVlbnxlbnwxfHx8fDE3NTk4NDM3MDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="RMMS Dashboard"
+                <ImageWithFallback
+                  src={screenshots.desktop}
+                  alt={c.desktopAlt || "RMMS Dashboard"}
                   className="w-full h-96 object-cover rounded-lg"
                 />
               </div>
@@ -47,9 +105,9 @@ export function ProductScreenshots() {
                 <div className="h-6 bg-gray-100 flex items-center justify-center">
                   <div className="w-16 h-1 bg-gray-400 rounded-full"></div>
                 </div>
-                <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1519337364444-c5eeec430101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBtb2NrdXAlMjBidXNpbmVzcyUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NTk4NDM3MTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Mobile Dashboard"
+                <ImageWithFallback
+                  src={screenshots.mobile}
+                  alt={c.mobileAlt || "Mobile Dashboard"}
                   className="w-full h-48 object-cover"
                 />
               </div>
@@ -63,27 +121,15 @@ export function ProductScreenshots() {
 
         {/* Feature Highlights */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center space-y-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto">
-              <span className="text-white font-bold">📊</span>
+          {features.map((f, i) => (
+            <div key={i} className="text-center space-y-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto">
+                <span className="text-white text-xl">{f.icon}</span>
+              </div>
+              <h3 className="font-semibold text-foreground">{f.title}</h3>
+              <p className="text-gray-600">{f.description}</p>
             </div>
-            <h3 className="font-semibold text-foreground">Real-time Analytics</h3>
-            <p className="text-gray-600">Monitor your mill's performance with live data and insights.</p>
-          </div>
-          <div className="text-center space-y-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto">
-              <span className="text-white font-bold">📱</span>
-            </div>
-            <h3 className="font-semibold text-foreground">Mobile Access</h3>
-            <p className="text-gray-600">Access your dashboard anywhere with our responsive mobile interface.</p>
-          </div>
-          <div className="text-center space-y-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto">
-              <span className="text-white font-bold">🔧</span>
-            </div>
-            <h3 className="font-semibold text-foreground">Customizable</h3>
-            <p className="text-gray-600">Tailor the dashboard to match your specific operational needs.</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
