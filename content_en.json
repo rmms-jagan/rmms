@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:25:07.498Z",
+  "lastUpdated": "2025-10-10T13:47:57.627Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -128,6 +128,11 @@
           "benefit_icon": "Shield",
           "benefit_title": "Secure",
           "benefit_desc": "Bank-level security with data encryption, role-based access, and compliance standards."
+        },
+        {
+          "benefit_icon": "Settings",
+          "benefit_title": "Customizable",
+          "benefit_desc": "Adapt the system to your unique rice mill processes with flexible configuration options."
         },
         {
           "benefit_icon": "Headphones",
