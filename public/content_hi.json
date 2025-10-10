@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:10:48.657Z",
+  "lastUpdated": "2025-10-10T13:12:26.448Z",
   "language": "hi",
   "sheet": "Content",
   "data": {
@@ -115,17 +115,17 @@
     },
     "WhyChoose": {
       "title_prefix": "क्यों चुनें",
-      "title_highlight": "आरएमएमएस?",
+      "title_highlight": "RMMS?",
       "subtitle": "सैकड़ों राइस मिल मालिकों के साथ जुड़ें जिन्होंने हमारे विश्वसनीय प्लेटफ़ॉर्म से अपने संचालन को रूपांतरित किया है।",
       "trust_badge": "पूरे भारत में 200+ मिलों द्वारा विश्वसनीय",
       "groups": [
         {
-          "benefit_icon": "",
-          "benefit_title": "क्लाउड-आधारित",
+          "benefit_icon": "Cloud",
+          "benefit_title": "Cloud-based",
           "benefit_desc": "सुरक्षित क्लाउड इंफ्रास्ट्रक्चर और स्वचालित बैकअप के साथ कहीं से भी अपने डेटा तक पहुँचें।"
         },
         {
-          "benefit_icon": "",
+          "benefit_icon": "Shield",
           "benefit_title": "सुरक्षित",
           "benefit_desc": "डेटा एन्क्रिप्शन, भूमिका आधारित पहुंच और अनुपालन मानकों के साथ बैंक-स्तरीय सुरक्षा।"
         },
