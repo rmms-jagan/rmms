@@ -2,62 +2,67 @@ import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useContent } from "../context/ContentContext";
 
-// ✅ Define the expected CMS content structure
+// ✅ Define expected CMS structure
+interface ScreenshotSet {
+  desktop?: string;
+  mobile?: string;
+}
+
+interface FeatureGroup {
+  icon?: string;
+  title?: string;
+  description?: string;
+}
+
 interface ProductScreenshotsContent {
   headingPrefix?: string;
   headingHighlight?: string;
   subheading?: string;
-  screenshots?: {
-    desktop?: string;
-    mobile?: string;
-  } | string; // Sometimes CMS returns a string
+  screenshots?: ScreenshotSet | string;
   desktopAlt?: string;
   mobileAlt?: string;
-  features?: {
-    icon?: string;
-    title?: string;
-    description?: string;
-  }[];
+  groups?: FeatureGroup[];
 }
 
 export function ProductScreenshots() {
-  // ✅ Get dynamic CMS content, safely typed
-  const c = useContent("ProductScreenshots") as ProductScreenshotsContent;
+  // ✅ Get content from CMS safely
+  const c = (useContent("ProductScreenshots") || {}) as ProductScreenshotsContent;
 
-  // ✅ Safe fallback for screenshots
-  const screenshots =
+  // ✅ Ensure screenshots object always has desktop/mobile URLs
+  const screenshots: ScreenshotSet =
     typeof c.screenshots === "object" && c.screenshots !== null
       ? c.screenshots
       : {
-        desktop:
-          "https://images.unsplash.com/photo-1649881927251-46644283751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
-        mobile:
-          "https://images.unsplash.com/photo-1519337364444-c5eeec430101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
-      };
+          desktop:
+            "https://images.unsplash.com/photo-1649881927251-46644283751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
+          mobile:
+            "https://images.unsplash.com/photo-1519337364444-c5eeec430101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
+        };
 
-  const features =
-    c.features && Array.isArray(c.features) && c.features.length > 0
-      ? c.features
+  // ✅ Fallback features (if CMS doesn’t return any)
+  const features: FeatureGroup[] =
+    Array.isArray(c.groups) && c.groups.length > 0
+      ? c.groups
       : [
-        {
-          icon: "📊",
-          title: "Real-time Analytics",
-          description:
-            "Monitor your mill's performance with live data and insights.",
-        },
-        {
-          icon: "📱",
-          title: "Mobile Access",
-          description:
-            "Access your dashboard anywhere with our responsive mobile interface.",
-        },
-        {
-          icon: "🔧",
-          title: "Customizable",
-          description:
-            "Tailor the dashboard to match your specific operational needs.",
-        },
-      ];
+          {
+            icon: "📊",
+            title: "Real-time Analytics",
+            description:
+              "Monitor your mill's performance with live data and insights.",
+          },
+          {
+            icon: "📱",
+            title: "Mobile Access",
+            description:
+              "Access your dashboard anywhere with our responsive mobile interface.",
+          },
+          {
+            icon: "🔧",
+            title: "Customizable",
+            description:
+              "Tailor the dashboard to match your specific operational needs.",
+          },
+        ];
 
   return (
     <section className="py-20 bg-white">
@@ -79,8 +84,8 @@ export function ProductScreenshots() {
         {/* Main Dashboard Mockup */}
         <div className="relative mb-16">
           <div className="relative z-10 mx-auto max-w-6xl">
+            {/* Laptop Mockup */}
             <div className="relative">
-              {/* Laptop Frame */}
               <div className="bg-gray-900 rounded-t-2xl p-2">
                 <div className="flex space-x-2">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -114,7 +119,7 @@ export function ProductScreenshots() {
             </div>
           </div>
 
-          {/* Background Decorations */}
+          {/* Decorative Background */}
           <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-2xl"></div>
           <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-full blur-2xl"></div>
         </div>
