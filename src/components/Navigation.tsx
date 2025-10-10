@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Menu, Globe } from "lucide-react";
 import { useContent } from "../context/ContentContext";
 import { useLanguage } from "../context/ContentContext";
+import { safeText } from "../utils/safeContent";
 
 export function Navigation() {
   const c = useContent("Navigation");
@@ -28,11 +29,11 @@ export function Navigation() {
           <div className="flex-shrink-0 flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">
-                {c.logoIcon || "R"}
+                {safeText(c.logoIcon || "R")}
               </span>
             </div>
             <span className="text-xl font-semibold">
-              {c.logoText || "Company"}
+              {safeText(c.logoText || "RMMS")}
             </span>
           </div>
 
@@ -52,11 +53,11 @@ export function Navigation() {
           {/* ✅ Desktop Right Section (CTAs + Language Selector) */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost">
-              {c.ctaLoginText || "Login"}
+              {safeText(c.ctaLoginText || "Login")}
             </Button>
 
             <Button className="bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg transition-all duration-300">
-              {c.ctaButtonText || "Free Demo"}
+              {safeText(c.ctaButtonText || "Free Demo")}
             </Button>
 
             {/* 🌐 Language Dropdown */}
