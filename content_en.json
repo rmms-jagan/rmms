@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T13:12:26.432Z",
+  "lastUpdated": "2025-10-10T13:25:07.498Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -128,6 +128,11 @@
           "benefit_icon": "Shield",
           "benefit_title": "Secure",
           "benefit_desc": "Bank-level security with data encryption, role-based access, and compliance standards."
+        },
+        {
+          "benefit_icon": "Headphones",
+          "benefit_title": "24x7 Support",
+          "benefit_desc": "Get expert assistance whenever you need it with our dedicated customer support team."
         },
         {
           "stat_value": "200+",
