@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { Loader2, Mail, User, LockKeyhole, Home, Phone } from "lucide-react";
+import BrandHeader from "../BrandHeader/BrandHeader";
+import BrandFooter from "../BrandHeader/BrandFooter";
 
 const RegistrationPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -75,16 +77,7 @@ const RegistrationPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-50 via-white to-pink-50 px-4">
-      {/* Branding Header */}
-      <div className="flex items-center mb-6 space-x-2">
-        <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-md">
-          <span className="text-white font-bold text-lg">R</span>
-        </div>
-        <h1 className="text-2xl font-semibold text-gray-800 tracking-tight">
-          RMMS
-        </h1>
-      </div>
-
+      <BrandHeader />
       {/* Registration Card */}
       <div className="w-[90%] max-w-md bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
@@ -228,11 +221,7 @@ const RegistrationPage = () => {
           </Link>
         </div>
       </div>
-
-      {/* Footer */}
-      <p className="mt-6 text-xs text-gray-500">
-        © {new Date().getFullYear()} RMMS — All rights reserved.
-      </p>
+      <BrandFooter />
     </div>
   );
 };
