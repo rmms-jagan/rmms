@@ -6,7 +6,7 @@ import { safeText } from "../utils/safeContent";
 
 // ✅ Define CMS schema shape
 interface WhyChooseContent {
-  title_before?: string;
+  title_prefix?: string;
   title_highlight?: string;
   subtitle?: string;
   trust_badge?: string;
@@ -71,7 +71,7 @@ export function WhyChoose() {
         <div className="text-center space-y-8 mb-16">
           <div className="space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
-              {safeText(c.title_before) || "Why Choose"}{" "}
+              {safeText(c.title_prefix) || "Why Choose"}{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {safeText(c.title_highlight) || "RMMS?"}
               </span>
