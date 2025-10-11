@@ -1,0 +1,121 @@
+.paddy-report-container {
+    padding: 20px;
+  }
+  
+  .search-input {
+    padding: 8px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .loader-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    font-size: 12px;
+    color: #3498db;
+    text-align: center;
+    position: relative;
+  }
+  .loader::after {
+    content: "Loading...";
+    position: absolute;
+    font-size: 12px;
+    color: #3498db;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .paddy-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .paddy-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    min-height: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .paddy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+  }
+  
+  .card-actions button {
+    min-width: 0;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  /* ------------------- */
+  /* 🌟 Responsive Design */
+  /* ------------------- */
+  
+  /* Tablet screens */
+  @media (max-width: 768px) {
+    .paddy-card-list {
+      gap: 15px;
+    }
+  
+    .paddy-card {
+      width: 45%; /* Two cards per row on tablet */
+    }
+  }
+  
+  /* Mobile screens */
+  @media (max-width: 480px) {
+    .paddy-card-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .paddy-card {
+      width: 90%; /* Full width card on mobile */
+    }
+  
+    .search-input {
+      width: 90%;
+      font-size: 14px;
+    }
+  }
+  
