@@ -57,7 +57,7 @@ const LoginPage = ({ setUserLoggedIn }) => {
       </div>
 
       {/* Login Card */}
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
+      <div className="w-[90%] max-w-md bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
           Welcome Back 👋
         </h2>

@@ -5,6 +5,9 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   base: '/rmms/',  // 👈 important for GitHub Pages
+  css: {
+    postcss: './postcss.config.js',
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
@@ -59,3 +62,4 @@ export default defineConfig({
     open: true,
   },
 });
+
