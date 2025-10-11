@@ -53,29 +53,38 @@ const OTPVerification = () => {
         }
       );
 
-      if (response.data.status === "Success") {
+      console.log("🔹 OTP API Response:", response.data);
+      console.log("🔹 Pending OTP:", pendingOtp);
+
+      if (response.data.status?.toLowerCase() === "success") {
         sessionStorage.removeItem("pendingOtp");
 
-        if (pendingOtp.status === "forgotPasswordPending") {
+        const email = pendingOtp.rmmEmail;
+        const status = (pendingOtp.status || "").toLowerCase();
+
+        if (status.includes("forgotpassword")) {
+          console.log("➡️ Navigating to Update Password...");
           const pendingPassowrdUpdate = {
-            rmmEmail: pendingOtp.rmmEmail,
+            rmmEmail: email,
             status: "pendingPassowrdUpdate",
           };
           sessionStorage.setItem(
             "pendingPassowrdUpdate",
             JSON.stringify(pendingPassowrdUpdate)
           );
-          navigate("/update-password");
-        } else if (pendingOtp.status === "pendingRegistration") {
+          setTimeout(() => navigate("/update-password"), 100);
+        } else if (status.includes("pendingregistration")) {
+          console.log("➡️ Navigating to Login after registration...");
           navigate("/login");
         } else {
-          navigate("/login"); // fallback
+          console.log("⚠️ Unknown status — navigating to login.");
+          navigate("/login");
         }
       } else {
         setErrorMessage(response.data.message || "OTP verification failed.");
       }
     } catch (error) {
-      console.error("OTP verification error:", error);
+      console.error("❌ OTP verification error:", error);
       setErrorMessage("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
