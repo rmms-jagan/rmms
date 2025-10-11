@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X, Globe } from "lucide-react";
-import { useContent } from "../context/ContentContext";
-import { useLanguage } from "../context/ContentContext";
+import { useNavigate } from "react-router-dom"; // ✅ import this
+import { useContent, useLanguage } from "../context/ContentContext";
 import { safeText } from "../utils/safeContent";
 
 export function Navigation() {
   const c = useContent("Navigation");
   const { language, setLanguage } = useLanguage();
+  const navigate = useNavigate(); // ✅ initialize navigation hook
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,6 +23,11 @@ export function Navigation() {
     { code: "hi", label: "हिन्दी" },
     { code: "od", label: "ଓଡ଼ିଆ" },
   ];
+
+  const handleLoginClick = () => {
+    setMenuOpen(false);
+    navigate("/login"); // ✅ navigate to login route
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
@@ -54,7 +60,9 @@ export function Navigation() {
 
           {/* ✅ Desktop Right Section */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost">{safeText(c.ctaLoginText || "Login")}</Button>
+            <Button variant="ghost" onClick={handleLoginClick}>
+              {safeText(c.ctaLoginText || "Login")}
+            </Button>
 
             <Button className="bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg transition-all duration-300">
               {safeText(c.ctaButtonText || "Free Demo")}
@@ -114,7 +122,7 @@ export function Navigation() {
 
             {/* ✅ Buttons */}
             <div className="space-y-2">
-              <Button variant="ghost" className="w-full">
+              <Button variant="ghost" className="w-full" onClick={handleLoginClick}>
                 {safeText(c.ctaLoginText || "Login")}
               </Button>
 
