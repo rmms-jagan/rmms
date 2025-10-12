@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-12T07:32:00.373Z",
+  "lastUpdated": "2025-10-12T07:40:00.441Z",
   "language": "od",
   "sheet": "Content",
   "data": {
@@ -222,7 +222,7 @@
           "name": "ରାଜେଶ କୁମାର",
           "position": "ମାଲିକ, ଶ୍ରୀ ଲକ୍ଷ୍ମୀ ରାଇସ୍ ମିଲ୍ସ",
           "location": "ଆନ୍ଧ୍ର ପ୍ରଦେଶ",
-          "image": "same",
+          "image": "https://images.unsplash.com/photo-1632560962689-da7c2538fc23?auto=format&fit=crop&w=1080&q=80",
           "quote": "RMMS ଆମ ଚାଉଳ ମିଲ୍ କାର୍ଯ୍ୟକୁ ପୁରା ପରିବର୍ତ୍ତନ କରିଛି। ଆମେ ହସ୍ତଚାଳିତ କାମକୁ 80% କମାଇଛୁ ଏବଂ ଲାଭ 25% ବଢ଼ାଇଛୁ।",
           "rating": 5
         },
@@ -230,7 +230,7 @@
           "name": "ପ୍ରିୟା ଶର୍ମା",
           "position": "ପରିଚାଳକ, ଗୋଲ୍ଡେନ୍ ଗ୍ରେନ୍ ମିଲ୍ସ",
           "location": "ପଞ୍ଜାବ",
-          "image": "same",
+          "image": "https://images.unsplash.com/photo-1551731409-43eb3e517a1a?auto=format&fit=crop&w=1080&q=80",
           "quote": "ଏନାଲିଟିକ୍ସ ଡାଶବୋର୍ଡ ଆମକୁ ନୂତନ ଦୃଷ୍ଟିକୋଣ ଦେଇଥାଏ। ଏବେ ଆମେ ଚାହିଦା ଅନୁମାନ କରି ଉତ୍ପାଦନ ଉନ୍ନତ କରିପାରିବୁ।",
           "rating": 5
         },
@@ -238,7 +238,7 @@
           "name": "ସୁରେଶ ପଟେଲ",
           "position": "ସାଧାରଣ ପ୍ରବନ୍ଧକ, ହାରଭେଷ୍ଟ ରାଇସ୍ ଇଣ୍ଡଷ୍ଟ୍ରିଜ୍",
           "location": "ଗୁଜରାଟ",
-          "image": "same",
+          "image": "https://images.unsplash.com/photo-1652795385761-7ac287d0cd03?auto=format&fit=crop&w=1080&q=80",
           "quote": "କାର୍ଯ୍ୟାନୁଷ୍ଠାନ ସହଜ ଥିଲା ଏବଂ ଆମର ବିଲିଂ ପ୍ରଣାଳୀ ଏବେ ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱୟଂଚାଳିତ ଏବଂ GST ସମାନ।",
           "rating": 5
         }
