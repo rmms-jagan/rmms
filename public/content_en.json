@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-10T15:34:18.291Z",
+  "lastUpdated": "2025-10-12T06:39:19.137Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -146,6 +146,44 @@
         {
           "stat_value": "0.999",
           "stat_label": "Uptime SLA"
+        }
+      ]
+    },
+    "Pricing": {
+      "title_before": "Simple, Transparent",
+      "title_highlight": "Pricing",
+      "subtitle": "Choose the perfect plan for your rice mill. All plans include a 14-day free trial with no setup fees.",
+      "trial_text": "🎉 Start Free for 14 Days",
+      "trial_note": "No credit card required • Full access to all features • Cancel anytime",
+      "popular_label": "Most Popular",
+      "billing_note": "Billed monthly",
+      "groups": [
+        {
+          "plan_name": "Starter",
+          "plan_price": "₹2,999",
+          "plan_period": "/month",
+          "plan_desc": "Perfect for small rice mills getting started with automation",
+          "plan_cta": "Start Free Trial",
+          "plan_popular": false,
+          "plan_features": "Up to 50 transactions/day, Basic inventory management, Simple billing & invoicing, Email support, Mobile app access, Basic reports"
+        },
+        {
+          "plan_name": "Professional",
+          "plan_price": "₹7,999",
+          "plan_period": "/month",
+          "plan_desc": "Ideal for growing rice mills with advanced operational needs",
+          "plan_cta": "Start Free Trial",
+          "plan_popular": true,
+          "plan_features": "Unlimited transactions, Advanced inventory & stock management, Full billing & accounting suite, Procurement & vendor management, Priority phone support, Advanced analytics & reports, Custom workflows, API integrations"
+        },
+        {
+          "plan_name": "Enterprise",
+          "plan_price": "₹15,999",
+          "plan_period": "/month",
+          "plan_desc": "Complete solution for large rice mills with complex operations",
+          "plan_cta": "Contact Sales",
+          "plan_popular": false,
+          "plan_features": "Everything in Professional, Multi-location support, Custom development, Dedicated account manager, 24/7 priority support, Advanced security features, Training & onboarding, SLA guarantees"
         }
       ]
     }
