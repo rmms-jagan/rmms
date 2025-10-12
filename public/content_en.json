@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-12T06:39:19.137Z",
+  "lastUpdated": "2025-10-12T07:09:26.263Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -36,7 +36,7 @@
       "subtitle": "Streamline procurement, production, inventory, and sales — all in one cloud platform.",
       "cta_text": "Request a Demo",
       "cta_secondary": "Watch Video",
-      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57\n",
+      "image": "https://images.unsplash.com/photo-1579784340946-55a7bbd51d57",
       "image_alt": "Rice mill with digital automation",
       "float_value": "0.85",
       "float_label": "Efficiency Gain",
@@ -165,7 +165,14 @@
           "plan_desc": "Perfect for small rice mills getting started with automation",
           "plan_cta": "Start Free Trial",
           "plan_popular": false,
-          "plan_features": "Up to 50 transactions/day, Basic inventory management, Simple billing & invoicing, Email support, Mobile app access, Basic reports"
+          "plan_features": [
+            "Up to 50 transactions/day",
+            "Basic inventory management",
+            "Simple billing & invoicing",
+            "Email support",
+            "Mobile app access",
+            "Basic reports"
+          ]
         },
         {
           "plan_name": "Professional",
@@ -174,7 +181,16 @@
           "plan_desc": "Ideal for growing rice mills with advanced operational needs",
           "plan_cta": "Start Free Trial",
           "plan_popular": true,
-          "plan_features": "Unlimited transactions, Advanced inventory & stock management, Full billing & accounting suite, Procurement & vendor management, Priority phone support, Advanced analytics & reports, Custom workflows, API integrations"
+          "plan_features": [
+            "Unlimited transactions",
+            "Advanced inventory & stock management",
+            "Full billing & accounting suite",
+            "Procurement & vendor management",
+            "Priority phone support",
+            "Advanced analytics & reports",
+            "Custom workflows",
+            "API integrations"
+          ]
         },
         {
           "plan_name": "Enterprise",
@@ -183,7 +199,16 @@
           "plan_desc": "Complete solution for large rice mills with complex operations",
           "plan_cta": "Contact Sales",
           "plan_popular": false,
-          "plan_features": "Everything in Professional, Multi-location support, Custom development, Dedicated account manager, 24/7 priority support, Advanced security features, Training & onboarding, SLA guarantees"
+          "plan_features": [
+            "Everything in Professional",
+            "Multi-location support",
+            "Custom development",
+            "Dedicated account manager",
+            "24/7 priority support",
+            "Advanced security features",
+            "Training & onboarding",
+            "SLA guarantees"
+          ]
         }
       ]
     }
