@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-12T07:32:00.373Z",
+  "lastUpdated": "2025-10-12T07:40:00.441Z",
   "language": "hi",
   "sheet": "Content",
   "data": {
@@ -222,7 +222,7 @@
           "name": "राजेश कुमार",
           "position": "मालिक, श्री लक्ष्मी राइस मिल्स",
           "location": "आंध्र प्रदेश",
-          "image": "same",
+          "image": "https://images.unsplash.com/photo-1632560962689-da7c2538fc23?auto=format&fit=crop&w=1080&q=80",
           "quote": "RMMS ने हमारे चावल मिल संचालन को पूरी तरह बदल दिया है। हमने मैन्युअल काम को 80% तक कम किया और लाभ 25% बढ़ाया।",
           "rating": 5
         },
@@ -230,7 +230,7 @@
           "name": "प्रिया शर्मा",
           "position": "प्रबंध निदेशक, गोल्डन ग्रेन मिल्स",
           "location": "पंजाब",
-          "image": "same",
+          "image": "https://images.unsplash.com/photo-1551731409-43eb3e517a1a?auto=format&fit=crop&w=1080&q=80",
           "quote": "एनालिटिक्स डैशबोर्ड हमें पहले कभी न मिले इनसाइट्स देता है। अब हम मांग का पूर्वानुमान लगाकर उत्पादन को बेहतर कर सकते हैं।",
           "rating": 5
         },
@@ -238,7 +238,7 @@
           "name": "सुरेश पटेल",
           "position": "महाप्रबंधक, हार्वेस्ट राइस इंडस्ट्रीज",
           "location": "गुजरात",
-          "image": "same",
+          "image": "https://images.unsplash.com/photo-1652795385761-7ac287d0cd03?auto=format&fit=crop&w=1080&q=80",
           "quote": "कार्यान्वयन आसान था और हमारा बिलिंग सिस्टम अब पूरी तरह स्वचालित और GST अनुरूप है।",
           "rating": 5
         }
