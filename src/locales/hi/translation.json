@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "title": "सेटिंग्स",
+    "subtitle": "अपने मिल के कॉन्फ़िगरेशन और प्राथमिकताओं का प्रबंधन करें",
+    "dashboard": "सेटिंग्स डैशबोर्ड",
+    "select": "मेनू से एक सेटिंग चुनें",
+    "menu": {
+      "ppc": "पीपीसी सेटिंग",
+      "category": "श्रेणी",
+      "bag": "बैग कॉन्फ़िगरेशन",
+      "warehouse": "वेयरहाउस",
+      "language": "भाषा"
+    }
+  },
+  "language": {
+    "title": "भाषा सेटिंग्स",
+    "subtitle": "एप्लिकेशन इंटरफ़ेस के लिए अपनी पसंदीदा भाषा चुनें।",
+    "current": "वर्तमान भाषा"
+  },
+  "warehouse": {
+    "warehouse_settings": "वेयरहाउस सेटिंग्स",
+    "warehouse_name": "वेयरहाउस नाम",
+    "warehouse_capacity": "क्षमता (टन में)",
+    "warehouse_address": "पता",
+    "add_warehouse": "वेयरहाउस जोड़ें",
+    "current_warehouses": "मौजूदा वेयरहाउस",
+    "no_warehouses_found": "कोई वेयरहाउस नहीं मिला।",
+    "confirm_delete": "वेयरहाउस हटाएं",
+    "loading": "लोड हो रहा है...",
+    "name": "नाम",
+    "capacity": "क्षमता",
+    "address": "पता",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं"
+  }
+}

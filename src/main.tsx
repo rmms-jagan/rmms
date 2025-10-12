@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
 import "./index.css"; // optional if you have Tailwind or global styles
+import "./i18n";
 
 // ✅ Create a React root and render the app
 const root = ReactDOM.createRoot(

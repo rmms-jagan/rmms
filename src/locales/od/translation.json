@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "title": "ସେଟିଂସ୍",
+    "subtitle": "ଆପଣଙ୍କ ମିଲ୍‌ର ବିନ୍ୟାସ ଏବଂ ପସନ୍ଦଗୁଡିକୁ ପରିଚାଳନା କରନ୍ତୁ",
+    "dashboard": "ସେଟିଂସ୍ ଡାଶବୋର୍ଡ",
+    "select": "ମେନୁରୁ ଗୋଟିଏ ସେଟିଂ ବାଛନ୍ତୁ",
+    "menu": {
+      "ppc": "PPC ସେଟିଂ",
+      "category": "ଶ୍ରେଣୀ",
+      "bag": "ବାଗ କନଫିଗୁରେସନ୍",
+      "warehouse": "ଗୋଦାମ",
+      "language": "ଭାଷା"
+    }
+  },
+  "language": {
+    "title": "ଭାଷା ସେଟିଂସ୍",
+    "subtitle": "ଆପଣଙ୍କ ପସନ୍ଦୀୟ ଭାଷା ବାଛନ୍ତୁ ଯାହା ଆପ୍ଲିକେସନ୍‌ରେ ଦେଖାଯିବ।",
+    "current": "ବର୍ତ୍ତମାନ ଭାଷା"
+  },
+  "warehouse": {
+    "warehouse_settings": "ଗୋଦାମ ସେଟିଂସ୍",
+    "warehouse_name": "ଗୋଦାମ ନାମ",
+    "warehouse_capacity": "କ୍ଷମତା (ଟନ୍‌ରେ)",
+    "warehouse_address": "ଠିକଣା",
+    "add_warehouse": "ଗୋଦାମ ଯୋଡନ୍ତୁ",
+    "current_warehouses": "ଚାଲୁ ଗୋଦାମଗୁଡିକ",
+    "no_warehouses_found": "କୌଣସି ଗୋଦାମ ମିଳିଲା ନାହିଁ।",
+    "confirm_delete": "ଗୋଦାମ ବିଲୋପ କରନ୍ତୁ",
+    "loading": "ଲୋଡ୍ ହେଉଛି...",
+    "name": "ନାମ",
+    "capacity": "କ୍ଷମତା",
+    "address": "ଠିକଣା",
+    "save": "ସେଭ୍ କରନ୍ତୁ",
+    "cancel": "ବାତିଲ୍ କରନ୍ତୁ",
+    "edit": "ସଂପାଦନା କରନ୍ତୁ",
+    "delete": "ବିଲୋପ କରନ୍ତୁ"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your mill’s configuration and preferences",
+    "dashboard": "Settings Dashboard",
+    "select": "Select a setting from the menu",
+    "menu": {
+      "ppc": "PPC Setting",
+      "category": "Category",
+      "bag": "Bag Configuration",
+      "warehouse": "Warehouse",
+      "language": "Language"
+    }
+  },
+  "language": {
+    "title": "Language Settings",
+    "subtitle": "Select your preferred language for the application interface.",
+    "current": "Current Language"
+  },
+  "warehouse":{
+    "warehouse_settings": "Warehouse Settings",
+    "warehouse_name": "Warehouse Name",
+    "warehouse_capacity": "Capacity (In Tons)",
+    "warehouse_address": "Address",
+    "add_warehouse": "Add Warehouse",
+    "current_warehouses": "Current Warehouses",
+    "no_warehouses_found": "No warehouses found.",
+    "confirm_delete": "Delete warehouse",
+    "loading": "Loading...",
+    "name": "Name",
+    "capacity": "Capacity",
+    "address": "Address",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete"
+  }
+  
+
+
+}
