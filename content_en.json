@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-12T07:09:26.263Z",
+  "lastUpdated": "2025-10-12T07:32:00.369Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -209,6 +209,38 @@
             "Training & onboarding",
             "SLA guarantees"
           ]
+        }
+      ]
+    },
+    "Testimonials": {
+      "title_before": "What Rice Mill Owners",
+      "title_highlight": "Say About Us",
+      "subtitle": "Don't just take our word for it. Hear from rice mill owners who have transformed their operations with RMMS.",
+      "trust_label": "average rating from 200+ customers",
+      "groups": [
+        {
+          "name": "Rajesh Kumar",
+          "position": "Owner, Sri Lakshmi Rice Mills",
+          "location": "Andhra Pradesh",
+          "image": "https://images.unsplash.com/photo-1632560962689-da7c2538fc23?auto=format&fit=crop&w=1080&q=80",
+          "quote": "RMMS has transformed our rice mill operations completely. We've reduced manual work by 80% and increased our profit margins by 25%.",
+          "rating": 5
+        },
+        {
+          "name": "Priya Sharma",
+          "position": "Managing Director, Golden Grain Mills",
+          "location": "Punjab",
+          "image": "https://images.unsplash.com/photo-1551731409-43eb3e517a1a?auto=format&fit=crop&w=1080&q=80",
+          "quote": "The analytics dashboard gives us insights we never had before. We can now predict demand and optimize our production.",
+          "rating": 5
+        },
+        {
+          "name": "Suresh Patel",
+          "position": "General Manager, Harvest Rice Industries",
+          "location": "Gujarat",
+          "image": "https://images.unsplash.com/photo-1652795385761-7ac287d0cd03?auto=format&fit=crop&w=1080&q=80",
+          "quote": "Implementation was smooth and our billing is now fully automated with GST compliance.",
+          "rating": 5
         }
       ]
     }
