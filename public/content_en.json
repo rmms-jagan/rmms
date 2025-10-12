@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-12T07:40:00.440Z",
+  "lastUpdated": "2025-10-12T08:04:08.717Z",
   "language": "en",
   "sheet": "Content",
   "data": {
@@ -243,6 +243,13 @@
           "rating": 5
         }
       ]
+    },
+    "CTABanner": {
+      "title": "Ready to Modernize Your Rice Mill?",
+      "subtitle": "Join 200+ successful rice mill owners...",
+      "primary_cta_text": "Schedule a Free Demo",
+      "secondary_cta_text": "Call: +91 9970516523",
+      "trust_points": "[\"No setup fees\",\"14-day free trial\",\"Cancel anytime\"]"
     }
   }
 }
