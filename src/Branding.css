@@ -1,0 +1,18 @@
+.text-primary-gradient {
+    background: linear-gradient(to right, #16a34a, #15803d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .table th, .table td {
+    font-size: 0.9rem;
+  }
+  
+  button.MuiButton-containedPrimary {
+    border-radius: 12px !important;
+    text-transform: none !important;
+  }
+  
+  .MuiDialog-paper {
+    border-radius: 1rem !important;
+  }

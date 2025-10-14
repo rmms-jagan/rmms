@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import "../../utils/Form.css";
+import { useTranslation } from "react-i18next";
 import { getUserInfo } from "../../utils/userSession";
 
-  const PaddyPurchaseForm = ({ initialData = {}, onClose }) => {
-  const editOrAdd = initialData?.rmmPaddyRecordId ? "UPDATE" : "SAVE"
+const PaddyPurchaseForm = ({ initialData = {}, onClose }) => {
+  const { t } = useTranslation();
   const user = getUserInfo();
+  const safeData = initialData || {};
+  const editMode = !!safeData?.rmmPaddyRecordId;
+
   const [formData, setFormData] = useState({
     rmmPaddyRecordId: "",
     serialNo: "",
@@ -19,233 +22,223 @@ import { getUserInfo } from "../../utils/userSession";
     perBagPrice: "",
     paddyType: "",
     collectionCenter: "",
-    ...initialData,
+    ...safeData,
   });
 
   const [paddyReceipt, setPaddyReceipt] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(initialData.receiptImage || null);
+  const [previewUrl, setPreviewUrl] = useState(safeData?.receiptImage ?? null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+  };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       setPaddyReceipt(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setPreviewUrl(reader.result); // base64 string
-      };
-      reader.readAsDataURL(file);
+      setPreviewUrl(URL.createObjectURL(file));
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.paddyType || !formData.collectionCenter) {
-      alert("Please select all required dropdowns.");
-      return;
-    }
+    console.log("Submitted data:", formData);
+    setIsPopupOpen(true);
+  };
 
-    const formPayload = new FormData();
-    formPayload.append("action", initialData?.rmmPaddyRecordId ? "paddyPurchaseUpdateAction" : "paddyPurchaseAction");
-    formPayload.append("rmmUserId", user[0]);
-    if (initialData?.rmmPaddyRecordId) formPayload.append("rmmPaddyRecordId", initialData.rmmPaddyRecordId);
-    formPayload.append("serialNo", formData.serialNo);
-    formPayload.append("farmerName", formData.farmerName);
-    formPayload.append("rememberFarmerName", formData.rememberFarmer ? "TRUE" : "FALSE");
-    formPayload.append("farmerAddress", formData.address);
-    formPayload.append("purchaseDate", formData.purchaseDate);
-    formPayload.append("totalPaddyInKg", formData.totalPaddy);
-    formPayload.append("perBagPrice", formData.perBagPrice);
-    formPayload.append("farmerEmail", formData.email);
-    formPayload.append("farmerMobile", formData.mobile);
-    formPayload.append("typeOfPaddy", formData.paddyType);
-    formPayload.append("paddyCollectFrom", formData.collectionCenter);
-    formPayload.append("anyRemarks", "");
-
-    if (paddyReceipt) {
-      const reader = new FileReader();
-      reader.onloadend = async () => {
-        const base64String = reader.result.split(",")[1]; // remove 'data:image/jpeg;base64,...'
-        formPayload.append("receiptImage", base64String);
-
-        // 🚀 Now after base64 is ready, submit the form
-        try {
-          const response = await fetch(user[10], {
-            method: "POST",
-            body: formPayload,
-          });
-          const result = await response.json();
-          alert(result.message || "Paddy entry saved!");
-          if (onClose) onClose();
-        } catch (error) {
-          console.error("Error submitting form:", error);
-          alert("Failed to submit paddy entry.");
-        }
-      };
-
-      reader.readAsDataURL(paddyReceipt);
-    } else {
-      // No image, just submit directly
-      try {
-        const response = await fetch(user[10], {
-          method: "POST",
-          body: formPayload,
-        });
-        const result = await response.json();
-        alert(result.message || "Paddy entry saved!");
-        if (onClose) onClose();
-      } catch (error) {
-        console.error("Error submitting form:", error);
-        alert("Failed to submit paddy entry.");
-      }
-    }
+  const handlePopupClose = () => {
+    setIsPopupOpen(false);
+    onClose?.();
   };
 
   return (
-    <div className="purchase-form-container">
-      <h2 className="form-title">PADDY PURCHASE FORM</h2>
-      <form onSubmit={handleSubmit} className="purchase-form">
-        <label>COLLECTION CENTER</label>
-        <select
-          name="collectionCenter"
-          value={formData.collectionCenter}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Collection Center</option>
-          <option value="LOCAL">Farmer/Local Business Vendor</option>
-          <option value="MANDI">Mandi</option>
-          <option value="OWN">Own</option>
-        </select>
-        <label>SERIAL NO.</label>
-        <input
-          type="text"
-          name="serialNo"
-          value={formData.serialNo}
-          onChange={handleChange}
-          required
-        />
+    <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-8 border border-gray-200 dark:border-gray-700 transition-all duration-300">
+      <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-2">
+        <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-lg text-sm font-medium">
+          {editMode ? t("paddy.edit_record") : t("paddy.add_new_record")}
+        </span>
+      </h2>
 
-        <label>FARMER NAME</label>
-        <input
-          type="text"
-          name="farmerName"
-          value={formData.farmerName}
-          onChange={handleChange}
-          required
-        />
-
-        <label className="checkbox-label">
+      <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Farmer Name */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            {t("paddy.farmer_name")}
+          </label>
           <input
-            type="checkbox"
-            name="rememberFarmer"
-            checked={formData.rememberFarmer}
+            type="text"
+            name="farmerName"
+            value={formData.farmerName}
             onChange={handleChange}
+            className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+            required
           />
-          REMEMBER FARMER (Select only for paddy business man)
-        </label>
+        </div>
 
-        <label>FARMER ADDRESS</label>
-        <input
-          type="text"
-          name="address"
-          value={formData.address}
-          onChange={handleChange}
-        />
+        {/* Mobile */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            {t("paddy.mobile")}
+          </label>
+          <input
+            type="text"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+            required
+          />
+        </div>
 
-        <label>EMAIL</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        {/* Address */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            {t("paddy.address")}
+          </label>
+          <input
+            type="text"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+          />
+        </div>
 
-        <label>MOBILE</label>
-        <input
-          type="tel"
-          name="mobile"
-          value={formData.mobile}
-          onChange={handleChange}
-        />
+        {/* Purchase Date */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            {t("paddy.purchase_date")}
+          </label>
+          <input
+            type="date"
+            name="purchaseDate"
+            value={formData.purchaseDate}
+            onChange={handleChange}
+            className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+          />
+        </div>
 
-        <label>PURCHASE DATE</label>
-        <input
-          type="date"
-          name="purchaseDate"
-          value={formData.purchaseDate}
-          onChange={handleChange}
-        />
+        {/* Total Paddy */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              {t("paddy.total_paddy")}
+            </label>
+            <input
+              type="number"
+              name="totalPaddy"
+              value={formData.totalPaddy}
+              onChange={handleChange}
+              className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+            />
+          </div>
 
-        <label>TOTAL PADDY (IN KG)</label>
-        <input
-          type="number"
-          name="totalPaddy"
-          value={formData.totalPaddy}
-          onChange={handleChange}
-        />
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              {t("paddy.per_bag_price")}
+            </label>
+            <input
+              type="number"
+              name="perBagPrice"
+              value={formData.perBagPrice}
+              onChange={handleChange}
+              className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+            />
+          </div>
+        </div>
 
-        <label>PER BAG PRICE</label>
-        <input
-          type="number"
-          name="perBagPrice"
-          value={formData.perBagPrice}
-          onChange={handleChange}
-        />
+        {/* Paddy Type & Collection Center */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              {t("paddy.paddy_type")}
+            </label>
+            <input
+              type="text"
+              name="paddyType"
+              value={formData.paddyType}
+              onChange={handleChange}
+              className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+            />
+          </div>
 
-        <label>TYPE OF PADDY</label>
-        <select
-          name="paddyType"
-          value={formData.paddyType}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Paddy Type</option>
-          <option value="Masoori">Masoori</option>
-          <option value="Tiki Masoori">Tiki Masoori</option>
-          <option value="Sama">Sama</option>
-          <option value="Sona Mossori">Sona Mossori</option>
-          <option value="HMT">HMT</option>
-          <option value="Other">Other</option>
-        </select>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              {t("paddy.collection_center")}
+            </label>
+            <input
+              type="text"
+              name="collectionCenter"
+              value={formData.collectionCenter}
+              onChange={handleChange}
+              className="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-green-500 focus:border-green-500"
+            />
+          </div>
+        </div>
 
-        <label>ADD PADDY RECEIPT</label>
-        <input
-          type="file"
-          accept="image/*,application/pdf"
-          onChange={handleFileChange}
-        />
-        {previewUrl && (
-          <div className="image-preview">
+        {/* Receipt Image Upload */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            {t("paddy.receipt_image")}
+          </label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="block w-full text-sm text-gray-600 border border-gray-300 rounded-lg cursor-pointer focus:outline-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600"
+          />
+          {previewUrl && (
             <img
               src={previewUrl}
               alt="Receipt Preview"
-              className="thumbnail-image"
-              onClick={() => setIsPopupOpen(true)}
+              className="w-32 h-32 object-cover mt-3 rounded-lg shadow-md border border-gray-200"
             />
-          </div>
-        )}
-        <button type="submit">{editOrAdd}</button>
+          )}
+        </div>
+
+        {/* Actions */}
+        <div className="flex justify-end gap-4 pt-6">
+          <button
+            type="button"
+            onClick={handlePopupClose}
+            className="px-5 py-2.5 rounded-lg border border-gray-300 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+          >
+            {t("common.cancel")}
+          </button>
+          <button
+            type="submit"
+            className="px-5 py-2.5 rounded-lg bg-green-600 text-white hover:bg-green-700 transition shadow-sm"
+          >
+            {editMode ? t("common.update") : t("common.save")}
+          </button>
+        </div>
       </form>
+
+      {/* Popup */}
       {isPopupOpen && (
-        <div className="popup-overlay" onClick={() => setIsPopupOpen(false)}>
-          <img
-            src={previewUrl}
-            alt="Full Receipt"
-            className="popup-image"
-          />
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-xl max-w-sm w-full text-center">
+            <p className="text-lg font-medium text-gray-800 dark:text-gray-100">
+              {t("paddy.record_saved_successfully")}
+            </p>
+            <button
+              onClick={handlePopupClose}
+              className="mt-5 px-6 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
+            >
+              {t("common.close")}
+            </button>
+          </div>
         </div>
       )}
     </div>
   );
+};
+
+PaddyPurchaseForm.defaultProps = {
+  initialData: {},
+  onClose: () => {},
 };
 
 export default PaddyPurchaseForm;

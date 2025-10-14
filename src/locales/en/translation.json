@@ -17,7 +17,7 @@
     "subtitle": "Select your preferred language for the application interface.",
     "current": "Current Language"
   },
-  "warehouse":{
+  "warehouse": {
     "warehouse_settings": "Warehouse Settings",
     "warehouse_name": "Warehouse Name",
     "warehouse_capacity": "Capacity (In Tons)",
@@ -34,8 +34,52 @@
     "cancel": "Cancel",
     "edit": "Edit",
     "delete": "Delete"
+  },
+  "paddy": {
+    "report_title": "Paddy Purchase Report",
+    "search_placeholder": "Search by Farmer, Address, Mobile...",
+    "add_new_record": "Add New Record",
+    "edit_record": "Edit Paddy Purchase",
+    "farmer_name": "Farmer Name",
+    "mobile": "Mobile",
+    "address": "Address",
+    "purchase_date": "Purchase Date",
+    "total_paddy": "Total Paddy (kg)",
+    "per_bag_price": "Per Bag Price (₹)",
+    "paddy_type": "Paddy Type",
+    "collection_center": "Collection Center",
+    "receipt_image": "Receipt Image",
+    "record_saved_successfully": "Record saved successfully!",
+    "table": {
+      "serial_no": "Sl. No",
+      "farmer_name": "Farmer Name",
+      "address": "Address",
+      "mobile": "Mobile",
+      "purchase_date": "Purchase Date",
+      "total_paddy": "Total Paddy (Bag)",
+      "per_bag_price": "Per Bag Price",
+      "paddy_type": "Paddy Type",
+      "collection_center": "Collection Center",
+      "action": "Action"
+    },
+    "dialog": {
+      "title": "Edit Paddy Purchase",
+      "close": "Close"
+    },
+    "messages": {
+      "loading": "Loading data...",
+      "no_records": "No records found.",
+      "error_fetch": "Error fetching data.",
+      "success_fetch": "Data loaded successfully."
+    }
+  },
+  "common": {
+    "search": "Search",
+    "edit": "Edit",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "update": "Update"
   }
-  
-
-
 }

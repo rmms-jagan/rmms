@@ -34,5 +34,56 @@
     "cancel": "रद्द करें",
     "edit": "संपादित करें",
     "delete": "हटाएं"
+  },"paddy": {
+    "report_title": "धान खरीद रिपोर्ट",
+    "search_placeholder": "किसान, पता, मोबाइल से खोजें...",
+    "add_new_record": "नया रिकॉर्ड जोड़ें",
+    "edit_record": "धान खरीद संपादित करें",
+    "title": "धान खरीद रिपोर्ट",
+    "add_record": "नया रिकॉर्ड जोड़ें",
+    "farmer_name": "किसान का नाम",
+    "address": "पता",
+    "mobile": "मोबाइल नंबर",
+    "purchase_date": "खरीद तिथि",
+    "total_paddy": "कुल धान (बोरा)",
+    "per_bag_price": "प्रति बोरा मूल्य",
+    "paddy_type": "धान का प्रकार",
+    "collection_center": "संग्रह केंद्र",
+    "action": "कार्यवाही",
+    "edit": "संपादित करें",
+    "edit_title": "धान खरीद संपादित करें",
+    "close": "बंद करें",
+    "no_data": "कोई रिकॉर्ड नहीं मिला।",
+    "table": {
+      "serial_no": "क्रम संख्या",
+      "farmer_name": "किसान का नाम",
+      "address": "पता",
+      "mobile": "मोबाइल नंबर",
+      "purchase_date": "खरीद तिथि",
+      "total_paddy": "कुल धान (बोरी)",
+      "per_bag_price": "प्रति बोरी मूल्य",
+      "paddy_type": "धान का प्रकार",
+      "collection_center": "संग्रह केंद्र",
+      "action": "कार्रवाई"
+    },
+    "dialog": {
+      "title": "धान खरीद संपादित करें",
+      "close": "बंद करें"
+    },
+    "messages": {
+      "loading": "डेटा लोड हो रहा है...",
+      "no_records": "कोई रिकॉर्ड नहीं मिला।",
+      "error_fetch": "डेटा लाने में त्रुटि।",
+      "success_fetch": "डेटा सफलतापूर्वक लोड किया गया।"
+    }
+  },
+  "common": {
+    "search": "खोजें",
+    "edit": "संपादित करें",
+    "close": "बंद करें",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें",
+    "update": "अपडेट करें"
   }
 }
