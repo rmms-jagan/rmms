@@ -34,7 +34,8 @@
     "cancel": "रद्द करें",
     "edit": "संपादित करें",
     "delete": "हटाएं"
-  },"paddy": {
+  },
+  "paddy": {
     "report_title": "धान खरीद रिपोर्ट",
     "search_placeholder": "किसान, पता, मोबाइल से खोजें...",
     "add_new_record": "नया रिकॉर्ड जोड़ें",
@@ -80,10 +81,30 @@
   "common": {
     "search": "खोजें",
     "edit": "संपादित करें",
-    "close": "बंद करें",
-    "save": "सहेजें",
-    "cancel": "रद्द करें",
     "confirm": "पुष्टि करें",
-    "update": "अपडेट करें"
+    "save": "सहेजें",
+    "update": "अपडेट करें",
+    "cancel": "रद्द करें",
+    "close": "बंद करें",
+    "success": "रिकॉर्ड सफलतापूर्वक सहेजा गया!",
+    "error": "धान प्रविष्टि सबमिट करने में विफल।",
+    "validation_error": "कृपया सभी आवश्यक विकल्प चुनें।"
+  },
+  "paddy_form": {
+    "title_add": "नया धान रिकॉर्ड जोड़ें",
+    "title_edit": "धान रिकॉर्ड संपादित करें",
+    "collection_center": "संग्रह केंद्र",
+    "collection_center_placeholder": "संग्रह केंद्र चुनें",
+    "serial_no": "क्रम संख्या",
+    "farmer_name": "किसान का नाम",
+    "remember_farmer": "किसान को याद रखें (नियमित विक्रेता के लिए)",
+    "address": "किसान का पता",
+    "email": "ईमेल",
+    "mobile": "मोबाइल",
+    "purchase_date": "खरीद की तारीख",
+    "total_paddy": "कुल धान (किलोग्राम में)",
+    "per_bag_price": "प्रति बोरी कीमत",
+    "paddy_type": "धान का प्रकार",
+    "receipt_image": "रसीद की छवि"
   }
 }

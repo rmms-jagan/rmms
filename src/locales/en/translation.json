@@ -80,6 +80,26 @@
     "save": "Save",
     "cancel": "Cancel",
     "confirm": "Confirm",
-    "update": "Update"
+    "update": "Update",
+    "success": "Record saved successfully!",
+    "error": "Failed to submit paddy entry.",
+    "validation_error": "Please select all required dropdowns."
+  },
+  "paddy_form": {
+    "title_add": "Add New Paddy Record",
+    "title_edit": "Edit Paddy Record",
+    "collection_center": "Collection Center",
+    "collection_center_placeholder": "Select Collection Center",
+    "serial_no": "Serial Number",
+    "farmer_name": "Farmer Name",
+    "remember_farmer": "Remember Farmer (For regular vendor)",
+    "address": "Farmer Address",
+    "email": "Email",
+    "mobile": "Mobile",
+    "purchase_date": "Purchase Date",
+    "total_paddy": "Total Paddy (in Kg)",
+    "per_bag_price": "Per Bag Price",
+    "paddy_type": "Type of Paddy",
+    "receipt_image": "Receipt Image"
   }
 }
