@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X, Globe } from "lucide-react";
-import { useNavigate } from "react-router-dom"; // ✅ import this
+import { useNavigate } from "react-router-dom";
 import { useContent, useLanguage } from "../context/ContentContext";
 import { safeText } from "../utils/safeContent";
 
 export function Navigation() {
   const c = useContent("Navigation");
   const { language, setLanguage } = useLanguage();
-  const navigate = useNavigate(); // ✅ initialize navigation hook
+  const navigate = useNavigate();
 
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // ✅ Parse navLinks safely
+  // ✅ Safely parse nav links
   const navLinks =
     typeof c.navLinks === "string"
       ? c.navLinks.split(",").map((link) => link.trim())
-      : ["Home", "Features", "Pricing", "Contact"]; // fallback links
+      : ["Home", "Features", "Pricing", "Contact"];
 
   const availableLangs = [
     { code: "en", label: "English" },
@@ -26,7 +26,18 @@ export function Navigation() {
 
   const handleLoginClick = () => {
     setMenuOpen(false);
-    navigate("/login"); // ✅ navigate to login route
+    navigate("/login");
+  };
+
+  // ✅ Smooth Scroll Logic
+  const handleNavClick = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    } else {
+      navigate(`/#${id}`);
+    }
   };
 
   return (
@@ -34,7 +45,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* ✅ Logo */}
-          <div className="flex-shrink-0 flex items-center space-x-2">
+          <div className="flex-shrink-0 flex items-center space-x-2 cursor-pointer" onClick={() => handleNavClick("hero")}>
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">
                 {safeText(c.logoIcon || "R")}
@@ -47,15 +58,18 @@ export function Navigation() {
 
           {/* ✅ Desktop Navigation */}
           <div className="hidden md:flex ml-10 items-baseline space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="text-gray-700 font-medium hover:text-primary transition-colors"
-              >
-                {link}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const sectionId = link.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <button
+                  key={link}
+                  onClick={() => handleNavClick(sectionId)}
+                  className="text-gray-700 font-medium hover:text-primary transition-colors"
+                >
+                  {link}
+                </button>
+              );
+            })}
           </div>
 
           {/* ✅ Desktop Right Section */}
@@ -105,19 +119,20 @@ export function Navigation() {
           <div className="px-4 py-4 space-y-3">
             {/* ✅ Mobile Navigation Links */}
             <div className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="block text-gray-700 font-medium hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const sectionId = link.toLowerCase().replace(/\s+/g, "-");
+                return (
+                  <button
+                    key={link}
+                    onClick={() => handleNavClick(sectionId)}
+                    className="block text-gray-700 font-medium hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-lg transition-colors text-left w-full"
+                  >
+                    {link}
+                  </button>
+                );
+              })}
             </div>
 
-            {/* Divider */}
             <div className="border-t border-gray-200 my-3" />
 
             {/* ✅ Buttons */}

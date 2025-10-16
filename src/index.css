@@ -2051,6 +2051,7 @@ body {
 
 html {
   font-size: var(--font-size);
+  scroll-behavior: smooth;
 }
 
 @property --tw-translate-x {
